@@ -1,0 +1,8 @@
+<templateSet group="gzeinnumer_live_template_kt">
+  <template name="gzn_click" value="binding.$VIEW$.setOnClickListener { &#10;    &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_EXPRESSION" value="true" />
+    </context>
+  </template>
+</templateSet>

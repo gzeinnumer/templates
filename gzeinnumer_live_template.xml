@@ -1,322 +1,329 @@
 <templateSet group="gzeinnumer_live_template">
-    <template name="gzn_tv" value="&lt;TextView&#10;    android:id=&quot;@+id/tv_$id$&quot;&#10;    style=&quot;@style/MyTextContent&quot;&#10;    tools:text=&quot;MyTextContent&quot; /&gt;" description="simple text view" toReformat="true" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_parent_view" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    android:id=&quot;@+id/parent&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&gt;&#10;&#10;    &lt;include layout=&quot;@layout/widget_bg&quot;&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot;/&gt;&#10;&#10;    &lt;androidx.core.widget.NestedScrollView&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot;&#10;        android:fillViewport=&quot;true&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;match_parent&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;            &lt;com.google.android.material.appbar.AppBarLayout&#10;                style=&quot;@style/MyAppbarLayout&quot;&#10;                android:background=&quot;@color/white&quot;&gt;&#10;&#10;                &lt;com.google.android.material.appbar.MaterialToolbar style=&quot;@style/MyMaterialToolbar&quot;&gt;&#10;&#10;                    &lt;LinearLayout&#10;                        android:gravity=&quot;center&quot;&#10;                        android:layout_width=&quot;match_parent&quot;&#10;                        android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;                        &lt;ImageButton&#10;                            android:id=&quot;@+id/btn_back&quot;&#10;                            style=&quot;@style/MyCostumToolbarImage&quot;&#10;                            android:src=&quot;@drawable/mygzn_keyboard_arrow_left&quot;&#10;                            android:tag=&quot;CostumToolbarImage&quot; /&gt;&#10;&#10;                        &lt;TextView&#10;                            android:id=&quot;@+id/tv_toolbar&quot;&#10;                            style=&quot;@style/MyCostumToolbarTitle&quot;&#10;                            android:text=&quot;MyCostumToolbarTitle&quot; /&gt;&#10;&#10;                        &lt;ImageButton&#10;                            android:id=&quot;@+id/btn_popup&quot;&#10;                            style=&quot;@style/MyOptionMenu&quot;&#10;                            android:src=&quot;@drawable/mygzn_more_vert&quot; /&gt;&#10;                    &lt;/LinearLayout&gt;&#10;                &lt;/com.google.android.material.appbar.MaterialToolbar&gt;&#10;            &lt;/com.google.android.material.appbar.AppBarLayout&gt;&#10;&#10;            &lt;View style=&quot;@style/MyDivider.Toolbar&quot; /&gt;&#10;&#10;            &lt;LinearLayout style=&quot;@style/MyParentType&quot;&gt;&#10;&#10;            &lt;/LinearLayout&gt;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/androidx.core.widget.NestedScrollView&gt;&#10;&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;" description="Simple Xml View" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyTopHeader" value="&lt;TextView&#10;    android:id=&quot;@+id/tv_$id$&quot;&#10;    style=&quot;@style/MyTopHeader&quot;&#10;    android:text=&quot;MyTopHeader&quot; /&gt;" description="MyTopHeader" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyTextHeader" value="&lt;TextView&#10;    android:id=&quot;@+id/tv_$id$&quot;&#10;    style=&quot;@style/MyTextHeader&quot;&#10;    android:text=&quot;MyTextHeader&quot; /&gt;" description="MyTextHeader" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyTextInputLayoutOutlinedBox" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyTextInputLayoutOutlinedBox&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;com.google.android.material.textfield.TextInputEditText&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyTextInputEditText&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyTextInputLayoutOutlinedBox" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyTextInputLayoutOutlinedBoxNext" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyTextInputLayoutOutlinedBoxNext&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;com.google.android.material.textfield.TextInputEditText&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyTextInputEditText&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyTextInputLayoutOutlinedBoxNext" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyTextInputLayoutFilledBox" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyTextInputLayoutFilledBox&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;com.google.android.material.textfield.TextInputEditText&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyTextInputEditText&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyTextInputLayoutFilledBox" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyButtonOutlined" value="&lt;Button&#10;    android:id=&quot;@+id/btn_$id$&quot;&#10;    style=&quot;@style/MyButtonOutlined&quot;&#10;    android:text=&quot;$hint$&quot; /&gt;" description="MyButtonOutlined" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyButtonText" value="&lt;Button&#10;    android:id=&quot;@+id/btn_$id$&quot;&#10;    style=&quot;@style/MyButtonText&quot;&#10;    android:text=&quot;$hint$&quot; /&gt;" description="MyButtonText" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyButtonIcon" value="&lt;Button&#10;    android:id=&quot;@+id/btn_$id$&quot;&#10;    style=&quot;@style/MyButtonIcon&quot;&#10;    android:text=&quot;$hint$&quot;&#10;    app:icon=&quot;@drawable/mygzn_add&quot; /&gt;" description="MyButtonIcon" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyAutoCompleteTextViewFilledBox" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyAutoCompleteTextViewFilledBox&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;AutoCompleteTextView&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyAutoCompleteTextView&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyAutoCompleteTextViewFilledBox" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyAutoCompleteTextViewOutlineBox" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyAutoCompleteTextViewOutlineBox&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;AutoCompleteTextView&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyAutoCompleteTextView&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyAutoCompleteTextViewOutlineBox" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyImageFotoPreview" value="&lt;ImageView&#10;    android:id=&quot;@+id/img_$id$&quot; &#10;    style=&quot;@style/MyImageFotoPreview&quot; /&gt;" description="MyImageFotoPreview" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyDivider" value="&lt;View style=&quot;@style/MyDivider&quot; /&gt;" description="MyDivider" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyDivider_H" value="&lt;View style=&quot;@style/MyDivider.Horizontal&quot;/&gt;" description="Top tp Bottom - MyDivider.Horizontal" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyDivider_V" value="&lt;View style=&quot;@style/MyDivider.Vertical&quot;/&gt;" description="Left To Right MyDivider.Vertical" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyRadioGroup" value="&lt;RadioGroup&#10;    android:id=&quot;@+id/rg_$id$&quot;&#10;    style=&quot;@style/MyRadioGroup&quot;&#10;    android:checkedButton=&quot;@+id/rb_first&quot;&gt;&#10;&#10;    &lt;RadioButton&#10;        android:id=&quot;@+id/rb_first&quot;&#10;        style=&quot;@style/MyRadioButton&quot;&#10;        android:text=&quot;MyRadioButton&quot; /&gt;&#10;&lt;/RadioGroup&gt;" description="MyRadioGroup" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyEditText" value="&lt;EditText&#10;    android:id=&quot;@+id/ed_$id$&quot;&#10;    style=&quot;@style/MyEditText&quot;&#10;    android:hint=&quot;MyEditText&quot; /&gt;" description="MyEditText" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyCheckBox" value="&lt;com.google.android.material.checkbox.MaterialCheckBox&#10;    android:id=&quot;@+id/cb_$id$&quot;&#10;    style=&quot;@style/MyCheckBox&quot;&#10;    android:text=&quot;MyCheckBox&quot; /&gt;" description="MyCheckBox" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_var_live_data" value="private final MutableLiveData&lt;$OBJECT$&gt; $VAR_NAME$ = new MutableLiveData&lt;&gt;();&#10;&#10;public void set$CAP_VAR_NAME$($OBJECT$ value) {&#10;    $VAR_NAME$.setValue(value);&#10;}&#10;&#10;public LiveData&lt;$OBJECT$&gt; get$CAP_VAR_NAME$() {&#10;    return $VAR_NAME$;&#10;}" shortcut="TAB" description="Simple MutableLiveData" toReformat="false" toShortenFQNames="true">
-        <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="false" />
-        <variable name="CAP_VAR_NAME" expression="capitalize(camelCase(VAR_NAME))" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_click" value="binding.$VIEW$.setOnClickListener(view -&gt; {&#10;&#10;});" description="set on click" toReformat="false" toShortenFQNames="true">
-        <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_EXPRESSION" value="true" />
-        </context>
-    </template>
-    <template name="use" value="String log = ConstantZein.USE;" description="" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_start_ins_viewmodel" value="private $object$ vm;&#10;vm = new ViewModelProvider(this).get($object$.class);" description="simple view Model Instanse" toReformat="false" toShortenFQNames="true">
-        <variable name="object" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_conf_item" value="android:layout_marginStart=&quot;@dimen/def_margin&quot;&#10;android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;android:layout_marginEnd=&quot;@dimen/def_margin&quot;&#10;android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;" description="item best Conf" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML_ATTRIBUTE" value="true" />
-        </context>
-    </template>
-    <template name="gzn_conf_rv" value="android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;    " description="space for LV/RV" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML_ATTRIBUTE" value="true" />
-        </context>
-    </template>
-    <template name="gzn_start_binding_ac" value="private $OBJECT$ binding;&#10;&#10;binding = $OBJECT$.inflate(getLayoutInflater());&#10;setContentView(binding.getRoot());&#10;&#10;initView();&#10;initTextWatcher();&#10;initObserver();&#10;initOnClick();" description="binding activity" toReformat="false" toShortenFQNames="true">
-        <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_EXPRESSION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_logd" value="GblFunction.myLogD(getClass().getSimpleName(), &quot;$METHOD_NAME$: &quot;+$content$);&#10;" description="" toReformat="false" toShortenFQNames="true">
-        <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
-        <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_EXPRESSION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_start_binding_fun" value="private void initView() {&#10;&#10;}&#10;&#10;private void initTextWatcher() {&#10;&#10;}&#10;&#10;private void initObserver() {&#10;&#10;}&#10;&#10;private void initOnClick() {&#10;    binding.btnBack.setOnClickListener(view -&gt; {&#10;        onBackPressed();&#10;    });&#10;    debugLocationActivity(binding.$debug$, getClass().getSimpleName());&#10;}" description="basic init function" toReformat="false" toShortenFQNames="true">
-        <variable name="debug" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_init_fr_oncreate" value="private $OBJECT_BIND$ binding;&#10;private $OBJECT_VM$ vm;&#10;&#10;@Override&#10;public View onCreateView(LayoutInflater inflater, ViewGroup container,&#10;        Bundle savedInstanceState) {&#10;    binding = $OBJECT_BIND$.inflate(inflater, container, false);&#10;    vm = new ViewModelProvider(this).get($OBJECT_VM$.class);&#10;    return binding.getRoot();&#10;}&#10;&#10;@Override&#10;public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {&#10;    super.onViewCreated(view, savedInstanceState);&#10;&#10;    initView();&#10;    initTextWatcher();&#10;    initObserver();&#10;    initOnClick();&#10;}&#10;&#10;private void initView() {&#10;&#10;}&#10;&#10;private void initTextWatcher() {&#10;&#10;}&#10;&#10;private void initObserver() {&#10;&#10;}&#10;&#10;public void initOnClick() {&#10;&#10;}" description="simple fr init" toReformat="false" toShortenFQNames="true">
-        <variable name="OBJECT_VM" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="OBJECT_BIND" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_init_ac_oncreate" value="private $OBJECT$ binding;&#10;private $OBJECT_VM$ vm;&#10;&#10;@Override&#10;protected void onCreate(Bundle savedInstanceState) {&#10;    super.onCreate(savedInstanceState);&#10;    binding = $OBJECT$.inflate(getLayoutInflater());&#10;    setContentView(binding.getRoot());&#10;    &#10;    vm = new ViewModelProvider(this).get($OBJECT_VM$.class);&#10;    &#10;    initView();&#10;    initTextWatcher();&#10;    initObserver();&#10;    initOnClick();&#10;}&#10;&#10;private void initView() {&#10;    &#10;}&#10;&#10;private void initTextWatcher() {&#10;&#10;}&#10;&#10;private void initObserver() {&#10;&#10;}&#10;&#10;private void initOnClick() {&#10;    debugLocationActivity(binding.tvToolbar, getClass().getSimpleName());&#10;    binding.btnBack.setOnClickListener(view -&gt; {&#10;        onBackPressed();&#10;    });&#10;}" description="simple ini oncreate" toReformat="false" toShortenFQNames="true">
-        <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="OBJECT_VM" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_MyButtonContained" value="&lt;Button&#10;    android:id=&quot;@+id/btn_$id$&quot;&#10;    style=&quot;@style/MyButtonContained&quot;&#10;    android:text=&quot;$hint$&quot; /&gt;" description="MyButtonContained" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_rv" value="&lt;androidx.recyclerview.widget.RecyclerView&#10;    android:id=&quot;@+id/rv&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&#10;    android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;    android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;&#10;    tools:listitem=&quot;@layout/item_$layout$&quot; /&gt;" description="simple RV" toReformat="false" toShortenFQNames="true">
-        <variable name="layout" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_rv_item" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;    &lt;androidx.cardview.widget.CardView&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_marginStart=&quot;@dimen/def_margin&quot;&#10;        android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;        android:layout_marginEnd=&quot;@dimen/def_margin&quot;&#10;        android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;&#10;        app:cardCornerRadius=&quot;@dimen/radius&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;wrap_content&quot;&#10;            android:layout_margin=&quot;@dimen/def_margin&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/androidx.cardview.widget.CardView&gt;&#10;&lt;/LinearLayout&gt;&#10;" description="best item config" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_rv_init_adapter" value="private void initAdapter() {&#10;    DummyAdapter adapter = new DummyAdapter(R.layout.item_$layout$, position -&gt; {&#10;&#10;    });&#10;&#10;    binding.rv.setAdapter(adapter);&#10;    binding.rv.hasFixedSize();&#10;    binding.rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));&#10;}" description="implement Dummy Adapter" toReformat="false" toShortenFQNames="true">
-        <variable name="layout" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_tv_content" value="&lt;LinearLayout&#10;    android:layout_width=&quot;wrap_content&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:layout_marginTop=&quot;@dimen/space&quot;&#10;    android:orientation=&quot;vertical&quot;&gt;&#10;&#10;    &lt;TextView&#10;        style=&quot;@style/MyTextContent.Small.Grey.Light&quot;&#10;        android:text=&quot;$hint$&quot; /&gt;&#10;&#10;    &lt;TextView&#10;        android:id=&quot;@+id/tv_$id$&quot;&#10;        style=&quot;@style/MyTextContent&quot;&#10;        android:layout_marginTop=&quot;5dp&quot;&#10;        android:text=&quot;$hint$&quot;&#10;        tools:text=&quot;$hint$&quot; /&gt;&#10;&lt;/LinearLayout&gt;" description="sub and detail content" toReformat="false" toShortenFQNames="true">
-        <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_bg_full" value="&lt;include&#10;    layout=&quot;@layout/widget_bg&quot;&#10;    android:layout_width=&quot;0dp&quot;&#10;    android:layout_height=&quot;0dp&quot;&#10;    app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;    app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;    app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;    app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;" description="bg with constrain" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="logdz" value="GblFunction.myLogD(TAG, &quot;$METHOD_NAME$: $content$&quot;);&#10;" description="" toReformat="false" toShortenFQNames="true">
-        <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
-    </template>
-    <template name="gzn_empty_content" value="&lt;View style=&quot;@style/EmptyContent&quot; /&gt;" description="" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_adapter" value="import android.view.LayoutInflater;&#10;import android.view.View;&#10;import android.view.ViewGroup;&#10;import android.widget.Filter;&#10;import android.widget.Filterable;&#10;&#10;import androidx.annotation.NonNull;&#10;import androidx.recyclerview.widget.RecyclerView;&#10;&#10;import com.gzeinnumer.myapplication.databinding.ItemRvBinding;&#10;&#10;import java.util.ArrayList;&#10;import java.util.Collections;&#10;import java.util.Comparator;&#10;import java.util.List;&#10;&#10;public class $NAME$ extends RecyclerView.Adapter&lt;RecyclerView.ViewHolder&gt; implements Filterable {&#10;&#10;    private List&lt;$OBJECT$&gt; list;&#10;    private List&lt;$OBJECT$&gt; listFilter;&#10;    private OnItemClickListener onItemClickListener;&#10;&#10;    private int emptyLayout = -1;&#10;&#10;    public $NAME$() {&#10;        this.list = new ArrayList&lt;&gt;();&#10;        this.listFilter = new ArrayList&lt;&gt;(list);&#10;    }&#10;&#10;    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {&#10;        this.onItemClickListener = onItemClickListener;&#10;    }&#10;&#10;    public void setList(List&lt;$OBJECT$&gt; list) {&#10;        this.list = list;&#10;        this.listFilter = new ArrayList&lt;&gt;(list);&#10;        notifyDataSetChanged();&#10;    }&#10;&#10;    @NonNull&#10;    @Override&#10;    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {&#10;        if (list.size() == 0) {&#10;            return new ViewHolderEmpty(LayoutInflater.from(parent.getContext()).inflate(emptyLayout == -1 ? R.layout.empty_item : emptyLayout, parent, false));&#10;        } else {&#10;            return new MyHolder($OBJECT_BINDING$.inflate(LayoutInflater.from(parent.getContext()), parent, false));&#10;        }&#10;    }&#10;&#10;    @Override&#10;    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {&#10;        //holder.itemView.setAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), GblVariabel.anim));&#10;        if (list.size() &gt; 0) {&#10;            ((MyHolder)holder).bind(position, list.get(position), onItemClickListener);&#10;        }&#10;    }&#10;&#10;    public static class MyHolder extends RecyclerView.ViewHolder {&#10;        public $OBJECT_BINDING$ binding;&#10;&#10;        public MyHolder(@NonNull $OBJECT_BINDING$ itemView) {&#10;            super(itemView.getRoot());&#10;            binding = itemView;&#10;        }&#10;&#10;        public void bind(int position, $OBJECT$ data, OnItemClickListener onItemClickListener) {&#10;&#10;            itemView.setOnClickListener(view -&gt; {&#10;                onItemClickListener.onItemClick(position);&#10;            });&#10;        }&#10;    }&#10;&#10;    @Override&#10;    public Filter getFilter() {&#10;        return exampleFilter;&#10;    }&#10;    &#10;    private final Filter exampleFilter = new Filter() {&#10;        @Override&#10;        protected FilterResults performFiltering(CharSequence constraint) {&#10;            List&lt;$OBJECT$&gt; fildteredList = new ArrayList&lt;&gt;();&#10;            if (constraint == null || constraint.length() == 0) {&#10;                Collections.sort(listFilter, new Comparator&lt;$OBJECT$&gt;() {&#10;                    @Override&#10;                    public int compare($OBJECT$ o1, $OBJECT$ o2) {&#10;//                        return o1.getStrTv2().toLowerCase().compareTo(o2.getStrTv2().toLowerCase());&#10;                        return o1.toLowerCase().compareTo(o2.toLowerCase());&#10;                    }&#10;                });&#10;                fildteredList.addAll(listFilter);&#10;            } else {&#10;                String filterPattern = constraint.toString().toLowerCase().trim();&#10;&#10;                for ($OBJECT$ item : listFilter) {&#10;                    if (item.toLowerCase().contains(filterPattern)) {&#10;                        fildteredList.add(item);&#10;                    }&#10;                }&#10;            }&#10;            FilterResults results = new FilterResults();&#10;            results.values = fildteredList;&#10;            return results;&#10;        }&#10;&#10;        @Override&#10;        protected void publishResults(CharSequence constraint, FilterResults results) {&#10;            list.clear();&#10;            list.addAll((List) results.values);&#10;            notifyDataSetChanged();&#10;        }&#10;    };&#10;&#10;    @Override&#10;    public int getItemCount() {&#10;        return list.size() &gt; 0 ? list.size() : 1;&#10;    }&#10;&#10;    public static class ViewHolderEmpty extends RecyclerView.ViewHolder {&#10;        public ViewHolderEmpty(@NonNull View itemView) {&#10;            super(itemView);&#10;        }&#10;    }&#10;&#10;    public interface OnItemClickListener {&#10;        void onItemClick(int position);&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="OBJECT_BINDING" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_single_image" value="&lt;LinearLayout&#10;    android:layout_marginBottom=&quot;@dimen/def_margin&quot;&#10;    android:layout_marginTop=&quot;@dimen/def_margin&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:gravity=&quot;center&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:layout_weight=&quot;1&quot;&gt;&#10;&#10;    &lt;ImageView&#10;        android:id=&quot;@+id/img&quot;&#10;        android:layout_width=&quot;wrap_content&quot;&#10;        android:layout_height=&quot;match_parent&quot;&#10;        android:scaleType=&quot;center&quot;&#10;        android:src=&quot;@drawable/ic_baseline_add_a_photo_24&quot; /&gt;&#10;&#10;&lt;/LinearLayout&gt;" description="Single Image" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_parent_view_single_foto" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    android:id=&quot;@+id/parent&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&gt;&#10;&#10;    &lt;LinearLayout&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        android:fillViewport=&quot;true&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;match_parent&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;            &lt;com.google.android.material.appbar.AppBarLayout&#10;                style=&quot;@style/MyAppbarLayout&quot;&#10;                android:background=&quot;@color/white&quot;&gt;&#10;&#10;                &lt;com.google.android.material.appbar.MaterialToolbar style=&quot;@style/MyMaterialToolbar&quot;&gt;&#10;&#10;                    &lt;LinearLayout&#10;                        android:gravity=&quot;center&quot;&#10;                        android:layout_width=&quot;match_parent&quot;&#10;                        android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;                        &lt;ImageButton&#10;                            android:id=&quot;@+id/btn_back&quot;&#10;                            style=&quot;@style/MyCostumToolbarImage&quot;&#10;                            android:src=&quot;@drawable/mygzn_keyboard_arrow_left&quot;&#10;                            android:tag=&quot;CostumToolbarImage&quot; /&gt;&#10;&#10;                        &lt;TextView&#10;                            android:id=&quot;@+id/tv_toolbar&quot;&#10;                            style=&quot;@style/MyCostumToolbarTitle&quot;&#10;                            android:text=&quot;Single Foto&quot; /&gt;&#10;                    &lt;/LinearLayout&gt;&#10;                &lt;/com.google.android.material.appbar.MaterialToolbar&gt;&#10;            &lt;/com.google.android.material.appbar.AppBarLayout&gt;&#10;&#10;            &lt;View style=&quot;@style/MyDivider.Toolbar&quot; /&gt;&#10;&#10;            &lt;LinearLayout&#10;                style=&quot;@style/MyParentType&quot;&#10;                android:gravity=&quot;center&quot;&gt;&#10;&#10;                &lt;LinearLayout&#10;                    android:layout_marginBottom=&quot;@dimen/def_margin&quot;&#10;                    android:layout_marginTop=&quot;@dimen/def_margin&quot;&#10;                    android:layout_width=&quot;match_parent&quot;&#10;                    android:gravity=&quot;center&quot;&#10;                    android:layout_height=&quot;wrap_content&quot;&#10;                    android:layout_weight=&quot;1&quot;&gt;&#10;&#10;                    &lt;ImageView&#10;                        android:id=&quot;@+id/img_foto&quot;&#10;                        android:layout_width=&quot;match_parent&quot;&#10;                        android:layout_height=&quot;match_parent&quot;&#10;                        android:scaleType=&quot;centerInside&quot;&#10;                        android:src=&quot;@drawable/ic_baseline_add_a_photo_24&quot; /&gt;&#10;&#10;                &lt;/LinearLayout&gt;&#10;&#10;                &lt;Button&#10;                    android:id=&quot;@+id/btn_simpan&quot;&#10;                    style=&quot;@style/MyButtonContained&quot;&#10;                    android:layout_width=&quot;match_parent&quot;&#10;                    android:text=&quot;Ambil Foto&quot; /&gt;&#10;            &lt;/LinearLayout&gt;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/LinearLayout&gt;&#10;&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;" description="For Activity Single Foto" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_visibility_in" value="AnimFunction.animationIn($VIEW$);" description="Anim In" toReformat="false" toShortenFQNames="true">
-        <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_EXPRESSION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_visibility_out" value="AnimFunction.animationOut($VIEW$);" description="Anim Out" toReformat="false" toShortenFQNames="true">
-        <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_EXPRESSION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_text_watcher" value="binding.$VIEW$.addTextChangedListener(new SimpleTextWatcher(s -&gt; {&#10;    &#10;}));" description="Simple Text Wathcher" toReformat="false" toShortenFQNames="true">
-        <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_EXPRESSION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_radio_button" value="&lt;TextView&#10;    style=&quot;@style/MyTextHeader&quot;&#10;    android:layout_marginTop=&quot;0dp&quot;&#10;    android:text=&quot;Pilih Product Category&quot; /&gt;&#10;&#10;&lt;com.gzeinnumer.dr.DynamicRadioButton&#10;    android:id=&quot;@+id/dr_&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;    app:style=&quot;@style/def_radioButtonStyle&quot; /&gt;" description="Simple Radio Button" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_var_list_live_data" value="private final MutableLiveData&lt;List&lt;$OBJECT$&gt;&gt; $VAR_NAME$s = new MutableLiveData&lt;&gt;();&#10;&#10;public LiveData&lt;List&lt;$OBJECT$&gt;&gt; getList$CAP_VAR_NAME$() {&#10;    return $VAR_NAME$s;&#10;}&#10;public void setList$CAP_VAR_NAME$(){&#10;    $VAR_NAME$s.postValue(null);&#10;}" description="" toReformat="false" toShortenFQNames="true">
-        <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="false" />
-        <variable name="CAP_VAR_NAME" expression="capitalize(camelCase(VAR_NAME))" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_visibility" value="android:visibility=&quot;gone&quot;&#10;tools:visibility=&quot;visible&quot;" description="" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML_ATTRIBUTE" value="true" />
-        </context>
-    </template>
-    <template name="temp_pendingdata" value="$OBJECT$ $VAR_NAME$ = new $OBJECT$();&#10;List&lt;$OBJECT$&gt; $VAR_NAME$s = $VAR_NAME$.getSendDataAll(&quot;0&quot;);&#10;for (int i = 0; i &lt; $VAR_NAME$s.size(); i++) {&#10;    data.add(new PendingData(&quot;$OBJECT$&quot;, &quot;1&quot;));&#10;}" description="" toReformat="false" toShortenFQNames="true">
-        <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="false" />
-        <context>
-            <option name="JAVA_EXPRESSION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_state_submit" value="private final MutableLiveData&lt;Integer&gt; stateSubmit = new MutableLiveData&lt;&gt;(0);&#10;public MutableLiveData&lt;Integer&gt; getStateSubmit() {&#10;    return stateSubmit;&#10;}" description="" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="JAVA_DECLARATION" value="true" />
-        </context>
-    </template>
-    <template name="gzn_parent_view_v2" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    android:id=&quot;@+id/parent&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&gt;&#10;&#10;    &lt;include&#10;        layout=&quot;@layout/widget_bg&quot;&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;&#10;&#10;    &lt;LinearLayout&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        android:orientation=&quot;vertical&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot;&gt;&#10;&#10;        &lt;com.google.android.material.appbar.AppBarLayout&#10;            style=&quot;@style/MyAppbarLayout&quot;&#10;            android:background=&quot;@color/white&quot;&gt;&#10;&#10;            &lt;com.google.android.material.appbar.MaterialToolbar style=&quot;@style/MyMaterialToolbar&quot;&gt;&#10;&#10;                &lt;LinearLayout&#10;                    android:layout_width=&quot;match_parent&quot;&#10;                    android:layout_height=&quot;wrap_content&quot;&#10;                    android:gravity=&quot;center&quot;&gt;&#10;&#10;                    &lt;ImageButton&#10;                        android:id=&quot;@+id/btn_back&quot;&#10;                        style=&quot;@style/MyCostumToolbarImage&quot;&#10;                        android:src=&quot;@drawable/mygzn_keyboard_arrow_left&quot;&#10;                        android:tag=&quot;CostumToolbarImage&quot; /&gt;&#10;&#10;                    &lt;TextView&#10;                        android:id=&quot;@+id/tv_toolbar&quot;&#10;                        style=&quot;@style/MyCostumToolbarTitle&quot;&#10;                        android:text=&quot;MyCostumToolbarTitle&quot; /&gt;&#10;&#10;                    &lt;ImageButton&#10;                        android:id=&quot;@+id/btn_popup&quot;&#10;                        style=&quot;@style/MyOptionMenu&quot;&#10;                        android:src=&quot;@drawable/mygzn_more_vert&quot; /&gt;&#10;                &lt;/LinearLayout&gt;&#10;            &lt;/com.google.android.material.appbar.MaterialToolbar&gt;&#10;        &lt;/com.google.android.material.appbar.AppBarLayout&gt;&#10;&#10;        &lt;View style=&quot;@style/MyDivider.Toolbar&quot; /&gt;&#10;&#10;        &lt;LinearLayout style=&quot;@style/MyParentType&quot;&gt;&#10;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/LinearLayout&gt;&#10;&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;" description="" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML" value="true" />
-        </context>
-    </template>
-    <template name="gzn_space" value="android:layout_marginTop=&quot;$space$&quot;&#10;android:layout_marginRight=&quot;$space$&quot;&#10;android:layout_marginLeft=&quot;$space$&quot;" description="" toReformat="false" toShortenFQNames="true">
-        <variable name="space" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="XML_ATTRIBUTE" value="true" />
-        </context>
-    </template>
-    <template name="gzn_constrain_parent" value="app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;app:layout_constraintTop_toTopOf=&quot;parent&quot;&#10;app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;app:layout_constraintStart_toStartOf=&quot;parent&quot;" description="" toReformat="false" toShortenFQNames="true">
-        <context>
-            <option name="XML_ATTRIBUTE" value="true" />
-        </context>
-    </template>
-    <template name="gzn_rv_initial" value="binding.$rv$.setAdapter($adapter$);&#10;binding.$rv$.setLayoutManager(new LinearLayoutManager(getApplicationContext()));&#10;binding.$rv$.hasFixedSize();" description="" toReformat="false" toShortenFQNames="true">
-        <variable name="rv" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="adapter" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_EXPRESSION" value="true" />
-        </context>
-    </template>
+  <template name="gzn_tv" value="&lt;TextView&#10;    android:id=&quot;@+id/tv_$id$&quot;&#10;    style=&quot;@style/MyTextContent&quot;&#10;    tools:text=&quot;MyTextContent&quot; /&gt;" description="simple text view" toReformat="true" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_parent_view" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    android:id=&quot;@+id/parent&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&gt;&#10;&#10;    &lt;include layout=&quot;@layout/widget_bg&quot;&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot;/&gt;&#10;&#10;    &lt;androidx.core.widget.NestedScrollView&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot;&#10;        android:fillViewport=&quot;true&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;match_parent&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;            &lt;com.google.android.material.appbar.AppBarLayout&#10;                style=&quot;@style/MyAppbarLayout&quot;&#10;                android:background=&quot;@color/white&quot;&gt;&#10;&#10;                &lt;com.google.android.material.appbar.MaterialToolbar style=&quot;@style/MyMaterialToolbar&quot;&gt;&#10;&#10;                    &lt;LinearLayout&#10;                        android:gravity=&quot;center&quot;&#10;                        android:layout_width=&quot;match_parent&quot;&#10;                        android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;                        &lt;ImageButton&#10;                            android:id=&quot;@+id/btn_back&quot;&#10;                            style=&quot;@style/MyCostumToolbarImage&quot;&#10;                            android:src=&quot;@drawable/mygzn_keyboard_arrow_left&quot;&#10;                            android:tag=&quot;CostumToolbarImage&quot; /&gt;&#10;&#10;                        &lt;TextView&#10;                            android:id=&quot;@+id/tv_toolbar&quot;&#10;                            style=&quot;@style/MyCostumToolbarTitle&quot;&#10;                            android:text=&quot;MyCostumToolbarTitle&quot; /&gt;&#10;&#10;                        &lt;ImageButton&#10;                            android:id=&quot;@+id/btn_popup&quot;&#10;                            style=&quot;@style/MyOptionMenu&quot;&#10;                            android:src=&quot;@drawable/mygzn_more_vert&quot; /&gt;&#10;                    &lt;/LinearLayout&gt;&#10;                &lt;/com.google.android.material.appbar.MaterialToolbar&gt;&#10;            &lt;/com.google.android.material.appbar.AppBarLayout&gt;&#10;&#10;            &lt;View style=&quot;@style/MyDivider.Toolbar&quot; /&gt;&#10;&#10;            &lt;LinearLayout style=&quot;@style/MyParentType&quot;&gt;&#10;&#10;            &lt;/LinearLayout&gt;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/androidx.core.widget.NestedScrollView&gt;&#10;&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;" description="Simple Xml View" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyTopHeader" value="&lt;TextView&#10;    android:id=&quot;@+id/tv_$id$&quot;&#10;    style=&quot;@style/MyTopHeader&quot;&#10;    android:text=&quot;MyTopHeader&quot; /&gt;" description="MyTopHeader" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyTextHeader" value="&lt;TextView&#10;    android:id=&quot;@+id/tv_$id$&quot;&#10;    style=&quot;@style/MyTextHeader&quot;&#10;    android:text=&quot;MyTextHeader&quot; /&gt;" description="MyTextHeader" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyTextInputLayoutOutlinedBox" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyTextInputLayoutOutlinedBox&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;com.google.android.material.textfield.TextInputEditText&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyTextInputEditText&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyTextInputLayoutOutlinedBox" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyTextInputLayoutOutlinedBoxNext" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyTextInputLayoutOutlinedBoxNext&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;com.google.android.material.textfield.TextInputEditText&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyTextInputEditText&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyTextInputLayoutOutlinedBoxNext" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyTextInputLayoutFilledBox" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyTextInputLayoutFilledBox&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;com.google.android.material.textfield.TextInputEditText&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyTextInputEditText&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyTextInputLayoutFilledBox" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyButtonOutlined" value="&lt;Button&#10;    android:id=&quot;@+id/btn_$id$&quot;&#10;    style=&quot;@style/MyButtonOutlined&quot;&#10;    android:text=&quot;$hint$&quot; /&gt;" description="MyButtonOutlined" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyButtonText" value="&lt;Button&#10;    android:id=&quot;@+id/btn_$id$&quot;&#10;    style=&quot;@style/MyButtonText&quot;&#10;    android:text=&quot;$hint$&quot; /&gt;" description="MyButtonText" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyButtonIcon" value="&lt;Button&#10;    android:id=&quot;@+id/btn_$id$&quot;&#10;    style=&quot;@style/MyButtonIcon&quot;&#10;    android:text=&quot;$hint$&quot;&#10;    app:icon=&quot;@drawable/mygzn_add&quot; /&gt;" description="MyButtonIcon" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyAutoCompleteTextViewFilledBox" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyAutoCompleteTextViewFilledBox&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;AutoCompleteTextView&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyAutoCompleteTextView&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyAutoCompleteTextViewFilledBox" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyAutoCompleteTextViewOutlineBox" value="&lt;com.google.android.material.textfield.TextInputLayout&#10;    android:id=&quot;@+id/ed_$id$_p&quot;&#10;    style=&quot;@style/MyAutoCompleteTextViewOutlineBox&quot;&#10;    android:hint=&quot;$hint$&quot;&gt;&#10;&#10;    &lt;AutoCompleteTextView&#10;        android:id=&quot;@+id/ed_$id$&quot;&#10;        style=&quot;@style/MyAutoCompleteTextView&quot; /&gt;&#10;&#10;&lt;/com.google.android.material.textfield.TextInputLayout&gt;" description="MyAutoCompleteTextViewOutlineBox" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyImageFotoPreview" value="&lt;ImageView&#10;    android:id=&quot;@+id/img_$id$&quot; &#10;    style=&quot;@style/MyImageFotoPreview&quot; /&gt;" description="MyImageFotoPreview" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyDivider" value="&lt;View style=&quot;@style/MyDivider&quot; /&gt;" description="MyDivider" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyDivider_H" value="&lt;View style=&quot;@style/MyDivider.Horizontal&quot;/&gt;" description="Top tp Bottom - MyDivider.Horizontal" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyDivider_V" value="&lt;View style=&quot;@style/MyDivider.Vertical&quot;/&gt;" description="Left To Right MyDivider.Vertical" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyRadioGroup" value="&lt;RadioGroup&#10;    android:id=&quot;@+id/rg_$id$&quot;&#10;    style=&quot;@style/MyRadioGroup&quot;&#10;    android:checkedButton=&quot;@+id/rb_first&quot;&gt;&#10;&#10;    &lt;RadioButton&#10;        android:id=&quot;@+id/rb_first&quot;&#10;        style=&quot;@style/MyRadioButton&quot;&#10;        android:text=&quot;MyRadioButton&quot; /&gt;&#10;&lt;/RadioGroup&gt;" description="MyRadioGroup" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyEditText" value="&lt;EditText&#10;    android:id=&quot;@+id/ed_$id$&quot;&#10;    style=&quot;@style/MyEditText&quot;&#10;    android:hint=&quot;MyEditText&quot; /&gt;" description="MyEditText" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyCheckBox" value="&lt;com.google.android.material.checkbox.MaterialCheckBox&#10;    android:id=&quot;@+id/cb_$id$&quot;&#10;    style=&quot;@style/MyCheckBox&quot;&#10;    android:text=&quot;MyCheckBox&quot; /&gt;" description="MyCheckBox" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_var_live_data" value="private final MutableLiveData&lt;$OBJECT$&gt; $VAR_NAME$ = new MutableLiveData&lt;&gt;();&#10;&#10;public void set$CAP_VAR_NAME$($OBJECT$ value) {&#10;    $VAR_NAME$.setValue(value);&#10;}&#10;&#10;public LiveData&lt;$OBJECT$&gt; get$CAP_VAR_NAME$() {&#10;    return $VAR_NAME$;&#10;}" shortcut="TAB" description="Simple MutableLiveData" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="false" />
+    <variable name="CAP_VAR_NAME" expression="capitalize(camelCase(VAR_NAME))" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_click" value="binding.$VIEW$.setOnClickListener(view -&gt; {&#10;&#10;});" description="set on click" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="use" value="String log = ConstantZein.USE;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_start_ins_viewmodel" value="private $object$ vm;&#10;vm = new ViewModelProvider(this).get($object$.class);" description="simple view Model Instanse" toReformat="false" toShortenFQNames="true">
+    <variable name="object" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_conf_item" value="android:layout_marginStart=&quot;@dimen/def_margin&quot;&#10;android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;android:layout_marginEnd=&quot;@dimen/def_margin&quot;&#10;android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;" description="item best Conf" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
+  <template name="gzn_conf_rv" value="android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;    " description="space for LV/RV" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
+  <template name="gzn_start_binding_ac" value="private $OBJECT$ binding;&#10;&#10;binding = $OBJECT$.inflate(getLayoutInflater());&#10;setContentView(binding.getRoot());&#10;&#10;initView();&#10;initTextWatcher();&#10;initObserver();&#10;initOnClick();" description="binding activity" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_logd" value="GblFunction.myLogD(getClass().getSimpleName(), &quot;$METHOD_NAME$: &quot;+$content$);&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_start_binding_fun" value="private void initView() {&#10;&#10;}&#10;&#10;private void initTextWatcher() {&#10;&#10;}&#10;&#10;private void initObserver() {&#10;&#10;}&#10;&#10;private void initOnClick() {&#10;    binding.btnBack.setOnClickListener(view -&gt; {&#10;        onBackPressed();&#10;    });&#10;    debugLocationActivity(binding.$debug$, getClass().getSimpleName());&#10;}" description="basic init function" toReformat="false" toShortenFQNames="true">
+    <variable name="debug" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_init_fr_oncreate" value="private $OBJECT_BIND$ binding;&#10;private $OBJECT_VM$ vm;&#10;&#10;@Override&#10;public View onCreateView(LayoutInflater inflater, ViewGroup container,&#10;        Bundle savedInstanceState) {&#10;    binding = $OBJECT_BIND$.inflate(inflater, container, false);&#10;    vm = new ViewModelProvider(this).get($OBJECT_VM$.class);&#10;    return binding.getRoot();&#10;}&#10;&#10;@Override&#10;public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {&#10;    super.onViewCreated(view, savedInstanceState);&#10;&#10;    initView();&#10;    initTextWatcher();&#10;    initObserver();&#10;    initOnClick();&#10;}&#10;&#10;private void initView() {&#10;&#10;}&#10;&#10;private void initTextWatcher() {&#10;&#10;}&#10;&#10;private void initObserver() {&#10;&#10;}&#10;&#10;public void initOnClick() {&#10;&#10;}" description="simple fr init" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT_VM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OBJECT_BIND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_init_ac_oncreate" value="private $OBJECT$ binding;&#10;private $OBJECT_VM$ vm;&#10;&#10;@Override&#10;protected void onCreate(Bundle savedInstanceState) {&#10;    super.onCreate(savedInstanceState);&#10;    binding = $OBJECT$.inflate(getLayoutInflater());&#10;    setContentView(binding.getRoot());&#10;    &#10;    vm = new ViewModelProvider(this).get($OBJECT_VM$.class);&#10;    &#10;    initView();&#10;    initTextWatcher();&#10;    initObserver();&#10;    initOnClick();&#10;}&#10;&#10;private void initView() {&#10;    &#10;}&#10;&#10;private void initTextWatcher() {&#10;&#10;}&#10;&#10;private void initObserver() {&#10;&#10;}&#10;&#10;private void initOnClick() {&#10;    debugLocationActivity(binding.tvToolbar, getClass().getSimpleName());&#10;    binding.btnBack.setOnClickListener(view -&gt; {&#10;        onBackPressed();&#10;    });&#10;}" description="simple ini oncreate" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OBJECT_VM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_MyButtonContained" value="&lt;Button&#10;    android:id=&quot;@+id/btn_$id$&quot;&#10;    style=&quot;@style/MyButtonContained&quot;&#10;    android:text=&quot;$hint$&quot; /&gt;" description="MyButtonContained" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_rv" value="&lt;androidx.recyclerview.widget.RecyclerView&#10;    android:id=&quot;@+id/rv&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&#10;    android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;    android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;&#10;    tools:listitem=&quot;@layout/item_$layout$&quot; /&gt;" description="simple RV" toReformat="false" toShortenFQNames="true">
+    <variable name="layout" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_rv_item" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;    &lt;androidx.cardview.widget.CardView&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_marginStart=&quot;@dimen/def_margin&quot;&#10;        android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;        android:layout_marginEnd=&quot;@dimen/def_margin&quot;&#10;        android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;&#10;        app:cardCornerRadius=&quot;@dimen/radius&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;wrap_content&quot;&#10;            android:layout_margin=&quot;@dimen/def_margin&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/androidx.cardview.widget.CardView&gt;&#10;&lt;/LinearLayout&gt;&#10;" description="best item config" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_rv_init_adapter" value="private void initAdapter() {&#10;    DummyAdapter adapter = new DummyAdapter(R.layout.item_$layout$, position -&gt; {&#10;&#10;    });&#10;&#10;    binding.rv.setAdapter(adapter);&#10;    binding.rv.hasFixedSize();&#10;    binding.rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));&#10;}" description="implement Dummy Adapter" toReformat="false" toShortenFQNames="true">
+    <variable name="layout" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_tv_content" value="&lt;LinearLayout&#10;    android:layout_width=&quot;wrap_content&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:layout_marginTop=&quot;@dimen/space&quot;&#10;    android:orientation=&quot;vertical&quot;&gt;&#10;&#10;    &lt;TextView&#10;        style=&quot;@style/MyTextContent.Small.Grey.Light&quot;&#10;        android:text=&quot;$hint$&quot; /&gt;&#10;&#10;    &lt;TextView&#10;        android:id=&quot;@+id/tv_$id$&quot;&#10;        style=&quot;@style/MyTextContent&quot;&#10;        android:layout_marginTop=&quot;5dp&quot;&#10;        android:text=&quot;$hint$&quot;&#10;        tools:text=&quot;$hint$&quot; /&gt;&#10;&lt;/LinearLayout&gt;" description="sub and detail content" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_bg_full" value="&lt;include&#10;    layout=&quot;@layout/widget_bg&quot;&#10;    android:layout_width=&quot;0dp&quot;&#10;    android:layout_height=&quot;0dp&quot;&#10;    app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;    app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;    app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;    app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;" description="bg with constrain" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="logdz" value="GblFunction.myLogD(TAG, &quot;$METHOD_NAME$: $content$&quot;);&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="gzn_empty_content" value="&lt;View style=&quot;@style/EmptyContent&quot; /&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_adapter" value="import android.view.LayoutInflater;&#10;import android.view.View;&#10;import android.view.ViewGroup;&#10;import android.widget.Filter;&#10;import android.widget.Filterable;&#10;&#10;import androidx.annotation.NonNull;&#10;import androidx.recyclerview.widget.RecyclerView;&#10;&#10;import com.gzeinnumer.myapplication.databinding.ItemRvBinding;&#10;&#10;import java.util.ArrayList;&#10;import java.util.Collections;&#10;import java.util.Comparator;&#10;import java.util.List;&#10;&#10;public class $NAME$ extends RecyclerView.Adapter&lt;RecyclerView.ViewHolder&gt; implements Filterable {&#10;&#10;    private List&lt;$OBJECT$&gt; list;&#10;    private List&lt;$OBJECT$&gt; listFilter;&#10;    private OnItemClickListener onItemClickListener;&#10;&#10;    private int emptyLayout = -1;&#10;&#10;    public $NAME$() {&#10;        this.list = new ArrayList&lt;&gt;();&#10;        this.listFilter = new ArrayList&lt;&gt;(list);&#10;    }&#10;&#10;    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {&#10;        this.onItemClickListener = onItemClickListener;&#10;    }&#10;&#10;    public void setList(List&lt;$OBJECT$&gt; list) {&#10;        this.list = list;&#10;        this.listFilter = new ArrayList&lt;&gt;(list);&#10;        notifyDataSetChanged();&#10;    }&#10;&#10;    @NonNull&#10;    @Override&#10;    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {&#10;        if (list.size() == 0) {&#10;            return new ViewHolderEmpty(LayoutInflater.from(parent.getContext()).inflate(emptyLayout == -1 ? R.layout.empty_item : emptyLayout, parent, false));&#10;        } else {&#10;            return new MyHolder($OBJECT_BINDING$.inflate(LayoutInflater.from(parent.getContext()), parent, false));&#10;        }&#10;    }&#10;&#10;    @Override&#10;    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {&#10;        //holder.itemView.setAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), GblVariabel.anim));&#10;        if (list.size() &gt; 0) {&#10;            ((MyHolder)holder).bind(position, list.get(position), onItemClickListener);&#10;        }&#10;    }&#10;&#10;    public static class MyHolder extends RecyclerView.ViewHolder {&#10;        public $OBJECT_BINDING$ binding;&#10;&#10;        public MyHolder(@NonNull $OBJECT_BINDING$ itemView) {&#10;            super(itemView.getRoot());&#10;            binding = itemView;&#10;        }&#10;&#10;        public void bind(int position, $OBJECT$ data, OnItemClickListener onItemClickListener) {&#10;&#10;            itemView.setOnClickListener(view -&gt; {&#10;                onItemClickListener.onItemClick(position);&#10;            });&#10;        }&#10;    }&#10;&#10;    @Override&#10;    public Filter getFilter() {&#10;        return exampleFilter;&#10;    }&#10;    &#10;    private final Filter exampleFilter = new Filter() {&#10;        @Override&#10;        protected FilterResults performFiltering(CharSequence constraint) {&#10;            List&lt;$OBJECT$&gt; fildteredList = new ArrayList&lt;&gt;();&#10;            if (constraint == null || constraint.length() == 0) {&#10;                Collections.sort(listFilter, new Comparator&lt;$OBJECT$&gt;() {&#10;                    @Override&#10;                    public int compare($OBJECT$ o1, $OBJECT$ o2) {&#10;//                        return o1.getStrTv2().toLowerCase().compareTo(o2.getStrTv2().toLowerCase());&#10;                        return o1.toLowerCase().compareTo(o2.toLowerCase());&#10;                    }&#10;                });&#10;                fildteredList.addAll(listFilter);&#10;            } else {&#10;                String filterPattern = constraint.toString().toLowerCase().trim();&#10;&#10;                for ($OBJECT$ item : listFilter) {&#10;                    if (item.toLowerCase().contains(filterPattern)) {&#10;                        fildteredList.add(item);&#10;                    }&#10;                }&#10;            }&#10;            FilterResults results = new FilterResults();&#10;            results.values = fildteredList;&#10;            return results;&#10;        }&#10;&#10;        @Override&#10;        protected void publishResults(CharSequence constraint, FilterResults results) {&#10;            list.clear();&#10;            list.addAll((List) results.values);&#10;            notifyDataSetChanged();&#10;        }&#10;    };&#10;&#10;    @Override&#10;    public int getItemCount() {&#10;        return list.size() &gt; 0 ? list.size() : 1;&#10;    }&#10;&#10;    public static class ViewHolderEmpty extends RecyclerView.ViewHolder {&#10;        public ViewHolderEmpty(@NonNull View itemView) {&#10;            super(itemView);&#10;        }&#10;    }&#10;&#10;    public interface OnItemClickListener {&#10;        void onItemClick(int position);&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OBJECT_BINDING" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_single_image" value="&lt;LinearLayout&#10;    android:layout_marginBottom=&quot;@dimen/def_margin&quot;&#10;    android:layout_marginTop=&quot;@dimen/def_margin&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:gravity=&quot;center&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:layout_weight=&quot;1&quot;&gt;&#10;&#10;    &lt;ImageView&#10;        android:id=&quot;@+id/img&quot;&#10;        android:layout_width=&quot;wrap_content&quot;&#10;        android:layout_height=&quot;match_parent&quot;&#10;        android:scaleType=&quot;center&quot;&#10;        android:src=&quot;@drawable/ic_baseline_add_a_photo_24&quot; /&gt;&#10;&#10;&lt;/LinearLayout&gt;" description="Single Image" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_parent_view_single_foto" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    android:id=&quot;@+id/parent&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&gt;&#10;&#10;    &lt;LinearLayout&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        android:fillViewport=&quot;true&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;match_parent&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;            &lt;com.google.android.material.appbar.AppBarLayout&#10;                style=&quot;@style/MyAppbarLayout&quot;&#10;                android:background=&quot;@color/white&quot;&gt;&#10;&#10;                &lt;com.google.android.material.appbar.MaterialToolbar style=&quot;@style/MyMaterialToolbar&quot;&gt;&#10;&#10;                    &lt;LinearLayout&#10;                        android:gravity=&quot;center&quot;&#10;                        android:layout_width=&quot;match_parent&quot;&#10;                        android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;                        &lt;ImageButton&#10;                            android:id=&quot;@+id/btn_back&quot;&#10;                            style=&quot;@style/MyCostumToolbarImage&quot;&#10;                            android:src=&quot;@drawable/mygzn_keyboard_arrow_left&quot;&#10;                            android:tag=&quot;CostumToolbarImage&quot; /&gt;&#10;&#10;                        &lt;TextView&#10;                            android:id=&quot;@+id/tv_toolbar&quot;&#10;                            style=&quot;@style/MyCostumToolbarTitle&quot;&#10;                            android:text=&quot;Single Foto&quot; /&gt;&#10;                    &lt;/LinearLayout&gt;&#10;                &lt;/com.google.android.material.appbar.MaterialToolbar&gt;&#10;            &lt;/com.google.android.material.appbar.AppBarLayout&gt;&#10;&#10;            &lt;View style=&quot;@style/MyDivider.Toolbar&quot; /&gt;&#10;&#10;            &lt;LinearLayout&#10;                style=&quot;@style/MyParentType&quot;&#10;                android:gravity=&quot;center&quot;&gt;&#10;&#10;                &lt;LinearLayout&#10;                    android:layout_marginBottom=&quot;@dimen/def_margin&quot;&#10;                    android:layout_marginTop=&quot;@dimen/def_margin&quot;&#10;                    android:layout_width=&quot;match_parent&quot;&#10;                    android:gravity=&quot;center&quot;&#10;                    android:layout_height=&quot;wrap_content&quot;&#10;                    android:layout_weight=&quot;1&quot;&gt;&#10;&#10;                    &lt;ImageView&#10;                        android:id=&quot;@+id/img_foto&quot;&#10;                        android:layout_width=&quot;match_parent&quot;&#10;                        android:layout_height=&quot;match_parent&quot;&#10;                        android:scaleType=&quot;centerInside&quot;&#10;                        android:src=&quot;@drawable/ic_baseline_add_a_photo_24&quot; /&gt;&#10;&#10;                &lt;/LinearLayout&gt;&#10;&#10;                &lt;Button&#10;                    android:id=&quot;@+id/btn_simpan&quot;&#10;                    style=&quot;@style/MyButtonContained&quot;&#10;                    android:layout_width=&quot;match_parent&quot;&#10;                    android:text=&quot;Ambil Foto&quot; /&gt;&#10;            &lt;/LinearLayout&gt;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/LinearLayout&gt;&#10;&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;" description="For Activity Single Foto" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_visibility_in" value="AnimFunction.animationIn($VIEW$);" description="Anim In" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_visibility_out" value="AnimFunction.animationOut($VIEW$);" description="Anim Out" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_text_watcher" value="binding.$VIEW$.addTextChangedListener(new SimpleTextWatcher(s -&gt; {&#10;    &#10;}));" description="Simple Text Wathcher" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_radio_button" value="&lt;TextView&#10;    style=&quot;@style/MyTextHeader&quot;&#10;    android:layout_marginTop=&quot;0dp&quot;&#10;    android:text=&quot;Pilih Product Category&quot; /&gt;&#10;&#10;&lt;com.gzeinnumer.dr.DynamicRadioButton&#10;    android:id=&quot;@+id/dr_&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;    app:style=&quot;@style/def_radioButtonStyle&quot; /&gt;" description="Simple Radio Button" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_var_list_live_data" value="private final MutableLiveData&lt;List&lt;$OBJECT$&gt;&gt; $VAR_NAME$s = new MutableLiveData&lt;&gt;();&#10;&#10;public LiveData&lt;List&lt;$OBJECT$&gt;&gt; getList$CAP_VAR_NAME$() {&#10;    return $VAR_NAME$s;&#10;}&#10;public void setList$CAP_VAR_NAME$(){&#10;    $VAR_NAME$s.postValue(null);&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="false" />
+    <variable name="CAP_VAR_NAME" expression="capitalize(camelCase(VAR_NAME))" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_visibility" value="android:visibility=&quot;gone&quot;&#10;tools:visibility=&quot;visible&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
+  <template name="temp_pendingdata" value="$OBJECT$ $VAR_NAME$ = new $OBJECT$();&#10;List&lt;$OBJECT$&gt; $VAR_NAME$s = $VAR_NAME$.getSendDataAll(&quot;0&quot;);&#10;for (int i = 0; i &lt; $VAR_NAME$s.size(); i++) {&#10;    data.add(new PendingData(&quot;$OBJECT$&quot;, &quot;1&quot;));&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_state_submit" value="private final MutableLiveData&lt;Integer&gt; stateSubmit = new MutableLiveData&lt;&gt;(0);&#10;public MutableLiveData&lt;Integer&gt; getStateSubmit() {&#10;    return stateSubmit;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_parent_view_v2" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    android:id=&quot;@+id/parent&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;match_parent&quot;&gt;&#10;&#10;    &lt;include&#10;        layout=&quot;@layout/widget_bg&quot;&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;&#10;&#10;    &lt;LinearLayout&#10;        android:layout_width=&quot;0dp&quot;&#10;        android:layout_height=&quot;0dp&quot;&#10;        android:orientation=&quot;vertical&quot;&#10;        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;        app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;        app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;        app:layout_constraintTop_toTopOf=&quot;parent&quot;&gt;&#10;&#10;        &lt;com.google.android.material.appbar.AppBarLayout&#10;            style=&quot;@style/MyAppbarLayout&quot;&#10;            android:background=&quot;@color/white&quot;&gt;&#10;&#10;            &lt;com.google.android.material.appbar.MaterialToolbar style=&quot;@style/MyMaterialToolbar&quot;&gt;&#10;&#10;                &lt;LinearLayout&#10;                    android:layout_width=&quot;match_parent&quot;&#10;                    android:layout_height=&quot;wrap_content&quot;&#10;                    android:gravity=&quot;center&quot;&gt;&#10;&#10;                    &lt;ImageButton&#10;                        android:id=&quot;@+id/btn_back&quot;&#10;                        style=&quot;@style/MyCostumToolbarImage&quot;&#10;                        android:src=&quot;@drawable/mygzn_keyboard_arrow_left&quot;&#10;                        android:tag=&quot;CostumToolbarImage&quot; /&gt;&#10;&#10;                    &lt;TextView&#10;                        android:id=&quot;@+id/tv_toolbar&quot;&#10;                        style=&quot;@style/MyCostumToolbarTitle&quot;&#10;                        android:text=&quot;MyCostumToolbarTitle&quot; /&gt;&#10;&#10;                    &lt;ImageButton&#10;                        android:id=&quot;@+id/btn_popup&quot;&#10;                        style=&quot;@style/MyOptionMenu&quot;&#10;                        android:src=&quot;@drawable/mygzn_more_vert&quot; /&gt;&#10;                &lt;/LinearLayout&gt;&#10;            &lt;/com.google.android.material.appbar.MaterialToolbar&gt;&#10;        &lt;/com.google.android.material.appbar.AppBarLayout&gt;&#10;&#10;        &lt;View style=&quot;@style/MyDivider.Toolbar&quot; /&gt;&#10;&#10;        &lt;LinearLayout style=&quot;@style/MyParentType&quot;&gt;&#10;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/LinearLayout&gt;&#10;&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_space" value="android:layout_marginTop=&quot;$space$&quot;&#10;android:layout_marginRight=&quot;$space$&quot;&#10;android:layout_marginLeft=&quot;$space$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="space" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
+  <template name="gzn_constrain_parent" value="app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;app:layout_constraintTop_toTopOf=&quot;parent&quot;&#10;app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;app:layout_constraintStart_toStartOf=&quot;parent&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
+  <template name="gzn_rv_initial" value="binding.$rv$.setAdapter($adapter$);&#10;binding.$rv$.setLayoutManager(new LinearLayoutManager(getApplicationContext()));&#10;binding.$rv$.hasFixedSize();" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="rv" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="adapter" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="text" value="&lt;TextView&#10;    android:id=&quot;@+id/tv_$id$&quot;&#10;    android:text=&quot;$text$&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
 </templateSet>
