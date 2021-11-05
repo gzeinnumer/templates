@@ -198,7 +198,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="gzn_rv_item" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;    &lt;androidx.cardview.widget.CardView&#10;        android:id=&quot;@+id/cv&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_marginStart=&quot;@dimen/def_margin&quot;&#10;        android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;        android:layout_marginEnd=&quot;@dimen/def_margin&quot;&#10;        android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;&#10;        app:cardCornerRadius=&quot;@dimen/radius&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;wrap_content&quot;&#10;            android:layout_margin=&quot;@dimen/def_margin&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/androidx.cardview.widget.CardView&gt;&#10;&lt;/LinearLayout&gt;&#10;" description="best item config" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_rv_item" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;    &lt;androidx.cardview.widget.CardView&#10;        android:id=&quot;@+id/cv&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_marginLeft=&quot;@dimen/def_margin&quot;&#10;        android:layout_marginTop=&quot;@dimen/def_margin_half&quot;&#10;        android:layout_marginRight=&quot;@dimen/def_margin&quot;&#10;        android:layout_marginBottom=&quot;@dimen/def_margin_half&quot;&#10;        app:cardCornerRadius=&quot;@dimen/radius&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;wrap_content&quot;&#10;            android:layout_margin=&quot;@dimen/def_margin&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/androidx.cardview.widget.CardView&gt;&#10;&lt;/LinearLayout&gt;" description="best item config" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
@@ -209,9 +209,9 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="gzn_tv_content" value="&lt;LinearLayout&#10;    android:layout_width=&quot;wrap_content&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:layout_marginTop=&quot;@dimen/space&quot;&#10;    android:orientation=&quot;vertical&quot;&gt;&#10;&#10;    &lt;TextView&#10;        style=&quot;@style/MyTextContent.Small.Grey.Light&quot;&#10;        android:text=&quot;$hint$&quot; /&gt;&#10;&#10;    &lt;TextView&#10;        android:id=&quot;@+id/tv_$id$&quot;&#10;        style=&quot;@style/MyTextContent&quot;&#10;        android:layout_marginTop=&quot;5dp&quot;&#10;        android:text=&quot;$hint$&quot;&#10;        tools:text=&quot;$hint$&quot; /&gt;&#10;&lt;/LinearLayout&gt;" description="sub and detail content" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_tv_content" value="&lt;LinearLayout&#10;    android:layout_width=&quot;wrap_content&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:layout_marginTop=&quot;@dimen/space&quot;&#10;    android:orientation=&quot;vertical&quot;&gt;&#10;&#10;    &lt;TextView&#10;        style=&quot;@style/MyTextContent.Small.Grey.Light&quot;&#10;        android:text=&quot;$hint$&quot; /&gt;&#10;&#10;    &lt;TextView&#10;        android:id=&quot;@+id/tv_$id$&quot;&#10;        style=&quot;@style/MyTextContent&quot;&#10;        android:layout_marginTop=&quot;5dp&quot;&#10;        tools:text=&quot;$hint$&quot; /&gt;&#10;&lt;/LinearLayout&gt;" description="sub and detail content" toReformat="false" toShortenFQNames="true">
     <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="hint" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
+    <variable name="hint" expression="capitalize(underscoresToSpaces(underscoresToCamelCase(id)))" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="XML" value="true" />
     </context>
@@ -312,9 +312,9 @@
       <option name="XML_ATTRIBUTE" value="true" />
     </context>
   </template>
-  <template name="gzn_rv_initial" value="binding.$rv$.setAdapter($adapter$);&#10;binding.$rv$.setLayoutManager(new LinearLayoutManager(getApplicationContext()));&#10;binding.$rv$.hasFixedSize();" description="" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_rv_initial" value="DummyAdapterV2 adapter = new DummyAdapterV2(R.layout.$item$, 3, new DummyAdapterV2.OnItemClickListener() {&#10;    @Override&#10;    public void onItemClick(int position) {&#10;&#10;    }&#10;});&#10;binding.$rv$.setAdapter(adapter);&#10;binding.$rv$.setLayoutManager(new LinearLayoutManager(getApplicationContext()));&#10;binding.$rv$.hasFixedSize();" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="item" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="rv" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="adapter" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_EXPRESSION" value="true" />
     </context>
@@ -324,6 +324,28 @@
     <variable name="text" expression="capitalize(id)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_ed_disable" value="android:editable=&quot;false&quot;&#10;android:inputType=&quot;none&quot;&#10;android:singleLine=&quot;true&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
+  <template name="gzn_margin_ltr" value="android:layout_marginTop=&quot;@dimen/$margin$&quot;&#10;android:layout_marginRight=&quot;@dimen/$margin$&quot;&#10;android:layout_marginLeft=&quot;@dimen/$margin$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="margin" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
+  <template name="gzn_margin_lbr" value="android:layout_marginBottom=&quot;@dimen/$margin$&quot;&#10;android:layout_marginRight=&quot;@dimen/$margin$&quot;&#10;android:layout_marginLeft=&quot;@dimen/$margin$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="margin" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
+  <template name="gzn_validate" value="private void validate() {&#10;    Validator validator = new Validator();&#10;    validator.addView();&#10;    boolean result = validator.validate();&#10;    if (result){&#10;    &#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
 </templateSet>
