@@ -409,4 +409,29 @@
       <option name="XML" value="true" />
     </context>
   </template>
+  <template name="gzn_debug" value="if (BuildConfig.DEBUG) {&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_paging1_4_vm" value="private LiveData&lt;PagedList&lt;$OBJECT$Response&gt;&gt; $VAR_NAME$;&#10;initPager$OBJECT$(application.getApplicationContext());&#10;private void initPager$OBJECT$(Context applicationContext) {&#10;    $OBJECT$DSFactory $VAR_NAME$DSFactory = new $OBJECT$DSFactory(applicationContext);&#10;    LiveData&lt;PageKeyedDataSource&lt;Integer, $OBJECT$Response&gt;&gt; liveDataSource = $VAR_NAME$DSFactory.getItemLiveDataSource();&#10;    PagedList.Config pagedListConfig = (new PagedList.Config.Builder())&#10;            .setEnablePlaceholders(false)&#10;            .setPageSize($OBJECT$DS.PAGE_SIZE)&#10;            .build();&#10;&#10;    $VAR_NAME$ = (new LivePagedListBuilder($VAR_NAME$DSFactory, pagedListConfig)).build();&#10;}&#10;public LiveData&lt;PagedList&lt;$OBJECT$Response&gt;&gt; get$OBJECT$() {&#10;    return $VAR_NAME$;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_paging1_5_observer" value="vm.get$VM$().observe(this, resource -&gt; {&#10;    adapter.submitList(resource);&#10;});" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="test_feni" value="Log.d($TAG$, $MESG$);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MESG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
 </templateSet>
