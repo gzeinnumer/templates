@@ -451,7 +451,7 @@
       <option name="objc" value="false" />
     </context>
   </template>
-  <template name="gzn_rm_java" value="```java&#10;```" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_rm_java" value="```java&#10;```" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="false" />
       <option name="GROOVY" value="false" />
@@ -468,7 +468,7 @@
       <option name="objc" value="false" />
     </context>
   </template>
-  <template name="gzn_rm_xml" value="```xml&#10;```" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_rm_xml" value="```xml&#10;```" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="false" />
       <option name="GROOVY" value="false" />
@@ -485,7 +485,7 @@
       <option name="objc" value="false" />
     </context>
   </template>
-  <template name="gzn_rm_kotlin" value="```kotlin&#10;```" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_rm_kotlin" value="```kotlin&#10;```" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="false" />
       <option name="GROOVY" value="false" />
@@ -502,7 +502,7 @@
       <option name="objc" value="false" />
     </context>
   </template>
-  <template name="gzn_rm_preview" value="&lt;pre&gt;&#10;&lt;img src=&quot;&quot; width=&quot;300&quot;&gt; &#10;&lt;/pre&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_rm_preview" value="&lt;pre&gt;&#10;&lt;img src=&quot;&quot; width=&quot;300&quot;&gt; &#10;&lt;/pre&gt;" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="false" />
       <option name="GROOVY" value="false" />
@@ -519,7 +519,7 @@
       <option name="objc" value="false" />
     </context>
   </template>
-  <template name="gzn_rm_img_v1" value="&lt;img src=&quot;&quot; width=&quot;300&quot;&gt; " toReformat="false" toShortenFQNames="true">
+  <template name="gzn_rm_img_v1" value="&lt;img src=&quot;&quot; width=&quot;300&quot;&gt; " description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="false" />
       <option name="GROOVY" value="false" />
