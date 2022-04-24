@@ -125,7 +125,7 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="gzn_click" value="binding.$VIEW$.setOnClickListener(view -&gt; {&#10;&#10;});" description="set on click" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_click" value="binding.$VIEW$.setOnClickListener(view -&gt; {&#10;bn//test&#10;});" description="set on click" toReformat="false" toShortenFQNames="true">
     <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_EXPRESSION" value="true" />
@@ -641,6 +641,36 @@
     </context>
   </template>
   <template name="gzn_paging_v2_filter_dialog" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;    android:id=&quot;@+id/dialog_canvas&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&#10;    android:layout_gravity=&quot;center_vertical|bottom&quot;&#10;    android:background=&quot;@drawable/filter_background_color&quot;&#10;    android:orientation=&quot;vertical&quot;&#10;    android:padding=&quot;@dimen/def_margin&quot;&gt;&#10;&#10;    &lt;TextView&#10;        style=&quot;@style/MyTextHeader&quot;&#10;        android:layout_gravity=&quot;center&quot;&#10;        android:layout_marginTop=&quot;0dp&quot;&#10;        android:text=&quot;Silahkan Pilih Filter&quot; /&gt;&#10;&#10;    &lt;View&#10;        style=&quot;@style/MyDivider&quot;&#10;        android:background=&quot;@color/colorPrimary&quot; /&gt;&#10;&#10;    &lt;TextView&#10;        style=&quot;@style/MyTextHeader&quot;&#10;        android:text=&quot;Pilih Tanggal&quot; /&gt;&#10;&#10;    &lt;LinearLayout&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;        &lt;com.google.android.material.textfield.TextInputLayout&#10;            android:id=&quot;@+id/ed_start_date_p&quot;&#10;            style=&quot;@style/MyAutoCompleteTextViewFilledBox.V2&quot;&#10;            android:layout_marginTop=&quot;@dimen/space&quot;&#10;            android:layout_width=&quot;wrap_content&quot;&#10;            android:layout_weight=&quot;1&quot;&#10;            android:hint=&quot;Start Date&quot;&#10;            app:endIconMode=&quot;none&quot;&gt;&#10;&#10;            &lt;AutoCompleteTextView&#10;                android:id=&quot;@+id/ed_start_date&quot;&#10;                style=&quot;@style/MyAutoCompleteTextView.V2&quot; /&gt;&#10;&#10;        &lt;/com.google.android.material.textfield.TextInputLayout&gt;&#10;&#10;        &lt;com.google.android.material.textfield.TextInputLayout&#10;            android:id=&quot;@+id/ed_end_date_p&quot;&#10;            style=&quot;@style/MyAutoCompleteTextViewFilledBox.V2&quot;&#10;            android:layout_marginTop=&quot;@dimen/space&quot;&#10;            android:layout_width=&quot;wrap_content&quot;&#10;            android:layout_marginStart=&quot;@dimen/def_margin&quot;&#10;            android:layout_marginLeft=&quot;@dimen/def_margin&quot;&#10;            android:layout_weight=&quot;1&quot;&#10;            android:hint=&quot;End Date&quot;&#10;            app:endIconMode=&quot;none&quot;&gt;&#10;&#10;            &lt;AutoCompleteTextView&#10;                android:id=&quot;@+id/ed_end_date&quot;&#10;                style=&quot;@style/MyAutoCompleteTextView.V2&quot; /&gt;&#10;&#10;        &lt;/com.google.android.material.textfield.TextInputLayout&gt;&#10;&#10;    &lt;/LinearLayout&gt;&#10;&#10;    &lt;View&#10;        style=&quot;@style/MyDivider&quot;&#10;        android:background=&quot;@color/colorPrimary&quot; /&gt;&#10;&#10;    &lt;LinearLayout&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_marginTop=&quot;@dimen/space_half&quot;&#10;        android:gravity=&quot;center&quot;&gt;&#10;&#10;        &lt;Button&#10;            android:id=&quot;@+id/btn_pilih_ulang&quot;&#10;            style=&quot;@style/MyButtonOutlined&quot;&#10;            android:text=&quot;Pilih Ulang&quot; /&gt;&#10;&#10;        &lt;Button&#10;            android:id=&quot;@+id/btn_pilih&quot;&#10;            style=&quot;@style/MyButtonContained&quot;&#10;            android:layout_marginStart=&quot;@dimen/def_margin&quot;&#10;            android:layout_marginLeft=&quot;@dimen/def_margin&quot;&#10;            android:text=&quot;Pilih&quot; /&gt;&#10;    &lt;/LinearLayout&gt;&#10;&lt;/LinearLayout&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_nested" value="&lt;androidx.core.widget.NestedScrollView&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:fillViewport=&quot;true&quot;&#10;    android:layout_height=&quot;match_parent&quot;&gt;&#10;&#10;    &lt;LinearLayout style=&quot;@style/MyParentType.List&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_width=&quot;match_parent&quot;&gt;&#10;    &lt;/LinearLayout&gt;&#10;&lt;/androidx.core.widget.NestedScrollView&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_nested_scroll" value="&lt;androidx.swiperefreshlayout.widget.SwipeRefreshLayout&#10;    android:id=&quot;@+id/swipeRefreshLayout&quot;&#10;    style=&quot;@style/swipeRefreshLayoutV1&quot;&gt;&#10;&#10;    &lt;androidx.core.widget.NestedScrollView&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&gt;&#10;&#10;        &lt;LinearLayout style=&quot;@style/MyParentType.List&quot;&#10;            android:layout_height=&quot;wrap_content&quot;&#10;            android:layout_width=&quot;match_parent&quot;&gt;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/androidx.core.widget.NestedScrollView&gt;&#10;&lt;/androidx.swiperefreshlayout.widget.SwipeRefreshLayout&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="gzn_var_live_data_response_repo_list_sql" value="private MutableLiveData&lt;BaseResource&lt;List&lt;$OBJECT$&gt;&gt;&gt; $VAR_NAME$;&#10;$VAR_NAME$ = new MutableLiveData&lt;&gt;();&#10;&#10;public void set$CAP_VAR_NAME$(String id) {&#10;    $VAR_NAME$.postValue(BaseResource.loading());&#10;    $VAR_NAME$.postValue(BaseResource.success(&quot;&quot;, &quot;&quot;, new $OBJECT$().read(), 0));&#10;}&#10;&#10;public MutableLiveData&lt;BaseResource&lt;List&lt;$OBJECT$&gt;&gt;&gt; get$CAP_VAR_NAME$() {&#10;    return $VAR_NAME$;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="false" />
+    <variable name="CAP_VAR_NAME" expression="capitalize(camelCase(VAR_NAME))" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_var_live_data_response_list_sql" value="private final LiveData&lt;BaseResource&lt;List&lt;$OBJECT$&gt;&gt;&gt; $VAR_NAME$;&#10;$VAR_NAME$ = repo$OBJECT$.get$OBJECT$();&#10;&#10;public void set$OBJECT$() {&#10;    repo$OBJECT$.set$OBJECT$();&#10;}&#10;&#10;public LiveData&lt;BaseResource&lt;List&lt;$OBJECT$&gt;&gt;&gt; get$OBJECT$() {&#10;    return $VAR_NAME$;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="OBJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_NAME" expression="camelCase(OBJECT)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_tv_debug" value="&lt;TextView&#10;    android:id=&quot;@+id/tv_debug&quot;&#10;    style=&quot;@style/MyTextContent&quot;&#10;    android:text=&quot;MyTextContent&quot;&#10;    android:textSize=&quot;6sp&quot;&#10;    android:visibility=&quot;gone&quot;&#10;    tools:visibility=&quot;visible&quot; /&gt;" description="simple text view debug" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="XML" value="true" />
     </context>
