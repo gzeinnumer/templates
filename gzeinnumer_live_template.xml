@@ -686,10 +686,38 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="gzn_viewbinding" value="buildFeatures{&#10;    viewBinding = true&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_viewbinding_implements" value="buildFeatures{&#10;    viewBinding = true&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="JAVA_CODE" value="true" />
-      <option name="KOTLIN" value="true" />
+      <option name="GROOVY" value="true" />
+    </context>
+  </template>
+  <template name="gzn_link" value="- []()" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_ATTRIBUTE" value="false" />
+      <option name="c" value="false" />
+      <option name="cpp" value="false" />
+      <option name="objc" value="false" />
+    </context>
+  </template>
+  <template name="gzn_viewbinding" value="private $BINDING$ binding;&#10;binding = $BINDING$.inflate(getLayoutInflater());&#10;setContentView(binding.getRoot());" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BINDING" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_to_debug_string" value="@Override&#10;public String toString() {&#10;    return new GsonBuilder().setPrettyPrinting().create().toJson(this, $className$.class);&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
 </templateSet>
