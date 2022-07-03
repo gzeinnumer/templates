@@ -720,4 +720,9 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
+  <template name="gzn_btn_small" value="&#10;android:minWidth=&quot;0dp&quot;&#10;android:minHeight=&quot;0dp&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_ATTRIBUTE" value="true" />
+    </context>
+  </template>
 </templateSet>
