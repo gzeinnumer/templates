@@ -725,4 +725,194 @@
       <option name="XML_ATTRIBUTE" value="true" />
     </context>
   </template>
+  <template name="gzn_dart_text" value="Text('$name$')" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_mainAxisAlignment_c" value="mainAxisAlignment: MainAxisAlignment.center," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dark_textAlign" value="textAlign: TextAlign." description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dark_appbar" value="AppBar(&#10;  title: const Text(&quot;$title$&quot;),&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dark_listview" value="ListView(&#10;  children: [],&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_listtile" value="ListTile(&#10;  title: $title$,&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_controller" value="final _$title$Controller = TextEditingController();" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_textfield_controller_hint" value="TextField(&#10;    controller: $controller$,&#10;    decoration: const InputDecoration(labelText: &quot;$hint$&quot;),&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="controller" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="hint" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_instance_session" value="final _preferencesService = PreferencesService();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_elevatedbutton" value="ElevatedButton(&#10;    child: const Text(&quot;$title$&quot;),&#10;    onPressed: () {},&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_gridview" value="GridView.builder(&#10;  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),&#10;  itemBuilder: (context, index){&#10;&#10;  }&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_blocbuilder" value="BlocBuilder&lt;$name$Bloc, $name$State&gt;(builder: (context, state) {&#10;  return Container();&#10;})" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_bloclistener" value="return BlocListener&lt;$name$Bloc, $name$State&gt;(&#10;  listener: (context, state) {&#10;    final status = state.status;&#10;    // if(status is ExamplOnLoading)&#10;  },&#10;  child: Container(),&#10;);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_blocread" value="context.read&lt;$name$Bloc&gt;().add(event);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_fromjson" value="factory $name$.fromJson(Map&lt;String, dynamic&gt; json){&#10;    //final temp = json['temp'];&#10;    &#10;    //final main = json['main'];&#10;    //final tempInfo = Model.fromJson(main);&#10;    &#10;    //final results = (json['results'] as List).map((e) =&gt; ResultModel.fromJson(e)).toList();&#10;    return $name$();&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_rm_reminder" value="#### $name$&#10;```&#10;```" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_ATTRIBUTE" value="false" />
+      <option name="c" value="false" />
+      <option name="cpp" value="false" />
+      <option name="objc" value="false" />
+    </context>
+  </template>
+  <template name="gzn_dart_blocmulti" value="MultiBlocProvider(&#10;    providers: [&#10;        BlocProvider&lt;$name$&gt;(create: (context) =&gt; $name$())&#10;    ],&#10;    child: Container(),&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_blocprovider" value="BlocProvider&lt;$name$&gt;(create: (context) =&gt; $name$())" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_cubitbuilder" value="BlocBuilder&lt;$CUBIT$, $RES$&gt;(builder: (context, res) {&#10;    return Container();&#10;})" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="CUBIT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RES" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_tc" value="try{&#10;    &#10;} on Error catch(e){&#10;    throw e;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_blocread_v2" value="BlocProvider.of&lt;$Bloc$Bloc&gt;(context).add(event)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Bloc" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_repomulti" value="MultiRepositoryProvider(&#10;  providers: [&#10;    RepositoryProvider(create: (context) =&gt; $Name$Repo())&#10;  ],&#10;  child: Container(),&#10;)," description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_blocclass" value="import 'package:flutter_bloc/flutter_bloc.dart';&#10;&#10;class $TITLE$Bloc extends Bloc&lt;$TITLE$Event, $TITLE$State&gt;{&#10;  $TITLE$Bloc() : super(null);&#10;  &#10;  @override&#10;  Stream&lt;$TITLE$State&gt; mapEventToState($TITLE$Event event) {&#10;    // TODO: implement mapEventToState&#10;    return super.mapEventToState(event);&#10;  }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzein_dart_blocclassfull" value="import 'package:flutter_bloc/flutter_bloc.dart';&#10;&#10;class $TITLE$Bloc extends Bloc&lt;$TITLE$Event, $TITLE$State&gt;{&#10;  $TITLE$Bloc() : super(null);&#10;  &#10;  @override&#10;  Stream&lt;PokemonState&gt; mapEventToState($TITLE$Event event) {&#10;    // TODO: implement mapEventToState&#10;    return super.mapEventToState(event);&#10;  }&#10;}&#10;&#10;abstract class $TITLE$Event{&#10;&#10;}&#10;&#10;abstract class $TITLE$State{&#10;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_builder" value="Builder(&#10;    builder: (context) {&#10;      return Container();&#10;    },&#10;)," toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_grid" value="GridView.builder(&#10;  itemCount: list.length,&#10;  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),&#10;  itemBuilder: (context, index) {&#10;    return Card(&#10;      child: GridTile(&#10;        child: Container(),&#10;      ),&#10;    );&#10;  },&#10;);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_list" value="ListView.builder(&#10;  itemCount: list.length,&#10;  itemBuilder: (context, index) {&#10;    return Card(&#10;      child: ListTile(&#10;        title: Container(),&#10;      ),&#10;    );&#10;  },&#10;);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_tabbar" value="MaterialApp(&#10;  home: DefaultTabController(&#10;    length: 1,&#10;    child: Scaffold(&#10;      backgroundColor: Colors.white70,&#10;      appBar: AppBar(&#10;        bottom: const TabBar(&#10;          tabs: [&#10;            Text(&quot;List&quot;),&#10;          ],&#10;        ),&#10;      ),&#10;      body: TabBarView(&#10;        children: [&#10;          Container(),&#10;        ],&#10;      ),&#10;    ),&#10;  ),&#10;);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_view" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$View extends StatelessWidget {&#10;  const $NAME$View({Key? key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: const Text(&quot;$NAME$&quot;),&#10;      ),&#10;      body: Container(),&#10;    );&#10;  }&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_http_future" value="Future&lt;List&lt;$MODEL$&gt;&gt; get$MODEL$() async{&#10;    try{&#10;      final url = Uri.https(_baseUrl, '/');&#10;      final response = await http.get(url);&#10;      final json = jsonDecode(response.body) as List;&#10;      final res = json.map((e) =&gt; $MODEL$.fromJson(e)).toList();&#10;      return res;&#10;    } on Error catch(e){&#10;      throw e;&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="MODEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gzn_dart_blocinit" value="//event&#10;abstract class $TITLE$Event{}&#10;&#10;class $TITLE$InitEvent extends $TITLE$Event{}&#10;&#10;class $TITLE$RefreshEvent extends $TITLE$Event{}&#10;&#10;//state&#10;abstract class $TITLE$State{}&#10;&#10;class $TITLE$OnLoadingState extends $TITLE$State{}&#10;&#10;class $TITLE$OnSuccessState extends $TITLE$State{&#10;  final List&lt;$TITLE$&gt; list;&#10;&#10;  $TITLE$OnSuccessState(this.list);&#10;}&#10;&#10;class $TITLE$OnFailedState extends $TITLE$State{&#10;  final Error exception;&#10;&#10;  $TITLE$OnFailedState(this.exception);&#10;}&#10;&#10;//bloc&#10;class $TITLE$Bloc extends Bloc&lt;$TITLE$Event, $TITLE$State&gt;{&#10;  final _dataService = DataService();&#10;&#10;  $TITLE$Bloc() : super($TITLE$OnLoadingState());&#10;&#10;  @override&#10;  Stream&lt;$TITLE$State&gt; mapEventToState($TITLE$Event event) async* {&#10;    if(event is $TITLE$InitEvent || event is $TITLE$RefreshEvent){&#10;      yield $TITLE$OnLoadingState();&#10;      try{&#10;        final res = await _dataService.getPosts();&#10;        yield $TITLE$OnSuccessState(res);&#10;      } on Error catch(e){&#10;        yield $TITLE$OnFailedState(e);&#10;      }&#10;    }&#10;  }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
