@@ -1,0 +1,50 @@
+<templateSet group="gzeinnumer_live_template_dart">
+  <template name="gdart_bloc_L0_Class" value="import 'package:flutter_bloc/flutter_bloc.dart';&#10;import 'package:intl/intl.dart';&#10;import 'package:sb_hris_v2/base/base_constans.dart';&#10;&#10;//EVENT-------------------------------------------------------------------------&#10;abstract class $BLOC_NAME$Event {}&#10;&#10;class $BLOC_NAME$EventInit extends $BLOC_NAME$Event {}&#10;&#10;class $BLOC_NAME$EventEd extends $BLOC_NAME$Event {&#10;  final String value;&#10;&#10;  $BLOC_NAME$EventEd(this.value);&#10;}&#10;&#10;class $BLOC_NAME$EventSubmit extends $BLOC_NAME$Event {}&#10;&#10;//STATUS------------------------------------------------------------------------&#10;abstract class $BLOC_NAME$Status {&#10;  const $BLOC_NAME$Status();&#10;}&#10;&#10;class $BLOC_NAME$StatusInit extends $BLOC_NAME$Status {&#10;  const $BLOC_NAME$StatusInit();&#10;}&#10;&#10;class $BLOC_NAME$StatusInitDone extends $BLOC_NAME$Status {&#10;  const $BLOC_NAME$StatusInitDone();&#10;}&#10;&#10;class $BLOC_NAME$StatusLoading extends $BLOC_NAME$Status {&#10;  const $BLOC_NAME$StatusLoading();&#10;}&#10;&#10;class $BLOC_NAME$StatusInfo extends $BLOC_NAME$Status {&#10;  final String? _title;&#10;  final String? _msg;&#10;  final int? _type;&#10;  //type 1 = success-&gt;back&#10;  //type 2 = info-&gt;stay&#10;  //type 3 = info-&gt;back&#10;  //type 4 = confirm&#10;  //type 5 = snackbar&#10;&#10;  String? get title =&gt; _title;&#10;  String? get msg =&gt; _msg;&#10;&#10;  int? get type =&gt; _type;&#10;&#10;  $BLOC_NAME$StatusInfo(this._title, this._msg, this._type);&#10;}&#10;&#10;//STATE-------------------------------------------------------------------------&#10;class $BLOC_NAME$State {&#10;&#10;  final String ed;&#10;  String? get isValidEd =&gt; ed.toString().isNotEmpty ? null : &quot;required&quot;;&#10;&#10;  final $BLOC_NAME$Status status;&#10;  bool isInfo;&#10;  bool isSubmit;&#10;&#10;  $BLOC_NAME$State({&#10;    this.ed = &quot;&quot;,&#10;    this.status = const $BLOC_NAME$StatusInit(),&#10;    this.isInfo = false,&#10;    this.isSubmit = false,&#10;  });&#10;&#10;  $BLOC_NAME$State copyWith({&#10;    String? ed,&#10;    $BLOC_NAME$Status? status,&#10;    bool? isInfo,&#10;    bool? isSubmit,&#10;  }) {&#10;    return $BLOC_NAME$State(&#10;      ed: ed?? this.ed,&#10;      status: status ?? this.status,&#10;      isInfo: isInfo ?? this.isInfo,&#10;      isSubmit: isSubmit ?? this.isSubmit,&#10;    );&#10;  }&#10;}&#10;&#10;//BLOC--------------------------------------------------------------------------&#10;class $BLOC_NAME$Bloc extends Bloc&lt;$BLOC_NAME$Event, $BLOC_NAME$State&gt; {&#10;  final $BLOC_NAME$Repo repo;&#10;&#10;  $BLOC_NAME$Bloc({&#10;    required this.repo,&#10;  }) : super($BLOC_NAME$State());&#10;&#10;  @override&#10;  Stream&lt;$BLOC_NAME$State&gt; mapEventToState($BLOC_NAME$Event event) async* {&#10;    if (event is $BLOC_NAME$EventInit) {&#10;&#10;    } else if (event is $BLOC_NAME$EventEd) {&#10;      yield state.copyWith(ed: event.value);&#10;    } else if (event is $BLOC_NAME$EventSubmit) {&#10;&#10;      try {&#10;        yield state.copyWith(isInfo: true);&#10;        yield state.copyWith(status: $BLOC_NAME$StatusInfo(MSG_WARNING, &quot;Success&quot;, 1), isInfo: false);&#10;      } on Error catch (e) {&#10;        yield state.copyWith(isInfo: true);&#10;        yield state.copyWith(status: $BLOC_NAME$StatusInfo(MSG_WARNING,e.toString(), 2), isInfo: false);&#10;      }&#10;    }&#10;  }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BLOC_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="gdart_bloc_L1_MultiRepositoryProvider_MultiBlocProvider" value="//L1&#10;body: MultiRepositoryProvider(&#10;  providers: [&#10;    RepositoryProvider(create: (context) =&gt; $BLOC_NAME$Repo()),&#10;  ],&#10;  child: MultiBlocProvider(&#10;    providers: [&#10;      BlocProvider&lt;$BLOC_NAME$Bloc&gt;(&#10;        create: (context) =&gt; $BLOC_NAME$Bloc(&#10;          repo: context.read&lt;$BLOC_NAME$Repo&gt;(),&#10;        )..add($BLOC_NAME$EventInit()),&#10;      )&#10;    ],&#10;    child: _body(),&#10;  ),&#10;)," description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BLOC_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_bloc_L2_BlocListener" value="//L2&#10;Widget _body() {&#10;  return BlocListener&lt;$BLOC_NAME$Bloc, $BLOC_NAME$State&gt;(&#10;    listener: (context, state) {&#10;      String TITLE = &quot;&quot;;&#10;      String MSG = &quot;&quot;;&#10;      int TYPE = 0;&#10;      //type 1 = success-&gt;back&#10;      //type 2 = info-&gt;stay&#10;      //type 3 = info-&gt;back&#10;      //type 4 = confirm&#10;      //type 5 = snackbar&#10;      final status = state.status;&#10;      if (status is $BLOC_NAME$StatusInitDone) {&#10;        final c = state.status as $BLOC_NAME$StatusInitDone;&#10;      } else if (status is $BLOC_NAME$StatusInfo) {&#10;        if (state.isInfo) {&#10;          final c = state.status as $BLOC_NAME$StatusInfo;&#10;          TITLE = c.title.toString();&#10;          MSG = c.msg.toString();&#10;          TYPE = c.type!;&#10;        }&#10;      }&#10;&#10;      if (TITLE.isNotEmpty &amp;&amp; MSG.isNotEmpty) {&#10;        if (TYPE == 1) {&#10;          showInfoDialog(&#10;            context,&#10;            TITLE,&#10;            MSG,&#10;            &quot;OK&quot;,&#10;            () {&#10;              Navigator.pop(context);&#10;              Navigator.pop(context, true);&#10;            },&#10;            MainAxisAlignment.center,&#10;          );&#10;        } else if (TYPE == 2) {&#10;          showInfoDialog(&#10;            context,&#10;            TITLE,&#10;            MSG,&#10;            &quot;OK&quot;,&#10;            () {&#10;              Navigator.pop(context);&#10;            },&#10;            MainAxisAlignment.center,&#10;          );&#10;        } else if (TYPE == 3) {&#10;        } else if (TYPE == 4) {&#10;        } else {}&#10;      }&#10;    },&#10;    child: _content(),&#10;  );&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BLOC_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdart_bloc_L3_BlocBuilder" value="//L3&#10;Widget _content() {&#10;  return BlocBuilder&lt;$BLOC_NAME$Bloc, $BLOC_NAME$State&gt;(&#10;    builder: (context, state) {&#10;      return _section(context, state);&#10;    },&#10;  );&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BLOC_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdart_snackbar" value="ScaffoldMessenger.of(context).showSnackBar(SnackBar(&#10;  content: Text(&quot;Hay&quot;),&#10;));" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_image_file" value="Image.file(File(path))" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_image_url" value="Image.network(url)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_image_assets" value="Image.asset('assets/imgs/file.png')" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
