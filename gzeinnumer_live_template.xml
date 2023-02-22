@@ -801,7 +801,7 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="gzn_dart_blocread" value="context.read&lt;$name$Bloc&gt;().add($name$$Event$Event)" description="" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_dart_blocread" value="context.read&lt;$name$Bloc&gt;().add($name$Event$Event$)" description="" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Event" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
