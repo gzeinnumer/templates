@@ -114,4 +114,7 @@
       <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
+  <template name="gdart_bloc_L5" value="//L5&#10;Widget c1() {&#10;    return BlocBuilder&lt;$ChangePassword$Bloc, $ChangePassword$State&gt;(&#10;      builder: (context, state) {&#10;        return TextFieldV1(&#10;          label: &quot;&quot;,&#10;          controller: null,&#10;          // validator: (value) =&gt; state.isValidPassword ? null : &quot;minimal 1 karakter&quot;,&#10;          // onChanged: (value) =&gt; context.read&lt;ChangePasswordBloc&gt;().add(ChangePasswordEventEdPasswordNew(value)),&#10;        );&#10;      },&#10;    );&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ChangePassword" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
 </templateSet>
