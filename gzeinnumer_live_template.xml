@@ -125,7 +125,7 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="gzn_click" value="binding.$VIEW$.setOnClickListener(view -&gt; {&#10;bn//test&#10;});" description="set on click" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_click" value="binding.$VIEW$.setOnClickListener(view -&gt; {&#10;    &#10;});" description="set on click" toReformat="false" toShortenFQNames="true">
     <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_EXPRESSION" value="true" />
@@ -1281,7 +1281,7 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="gzn_dart_stateless" value="import 'package:flutter/material.dart';&#10;&#10;class $Izin$View extends StatelessWidget {&#10;  const static String TAG = &quot;$Izin$View&quot;;&#10;&#10;  const $Izin$View({Key? key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: const Text(&quot;$Izin$&quot;),&#10;      ),&#10;      body: _body(),&#10;    );&#10;  }&#10;&#10;  Widget _body() {&#10;    return Builder(&#10;      builder: (context) {&#10;        return SingleChildScrollView(&#10;          child: Column(&#10;            children: [&#10;              &#10;            ],&#10;          ),&#10;        );&#10;      }&#10;    );&#10;  }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+  <template name="gzn_dart_stateless" value="import 'package:flutter/material.dart';&#10;&#10;class $Izin$View extends StatelessWidget {&#10;  static const String TAG = &quot;$Izin$View&quot;;&#10;&#10;  const $Izin$View({Key? key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: const Text(&quot;$Izin$&quot;),&#10;      ),&#10;      body: _body(context),&#10;    );&#10;  }&#10;  &#10;  Widget _body(BuildContext context) {&#10;    double width = MediaQuery.of(context).size.width;&#10;    double height = MediaQuery.of(context).size.height;&#10;    return SingleChildScrollView(&#10;      child: Container(&#10;        height: height,&#10;        width: width,&#10;        child: Column(&#10;          mainAxisAlignment: MainAxisAlignment.center,&#10;          crossAxisAlignment: CrossAxisAlignment.center,&#10;          children: [&#10;          ],&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
     <variable name="Izin" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
@@ -1326,6 +1326,30 @@
     <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="gzn_click_delay" value="binding.$VIEW$.setOnClickListener(new DelayButton(binding.$VIEW$, view -&gt; {&#10;    &#10;}));" description="set on click" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_newInstance" value="public static $CLASS_NAME$ newInstance() {&#10;    return new $CLASS_NAME$();&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_show_dialog" value="FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();&#10;Fragment previous = getSupportFragmentManager().findFragmentByTag($CustomMyLibDialog$.TAG);&#10;if(previous != null){&#10;    transaction.remove(previous);&#10;}&#10;$CustomMyLibDialog$ dialog = $CustomMyLibDialog$.newInstance();&#10;dialog.show(transaction, $CustomMyLibDialog$.TAG);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="CustomMyLibDialog" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="gzn_init_date" value="private void openDatePeriode() {&#10;    BasePopUp.datePickerMulti(requireActivity().getSupportFragmentManager(), requireActivity())&#10;            .onOkPressedCallBack((firstDate, secondDate) -&gt; {&#10;                Log.d(&quot;TAG&quot;, firstDate + &quot; sd &quot; + secondDate);&#10;            })&#10;            .build()&#10;            .show();&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
 </templateSet>

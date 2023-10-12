@@ -117,4 +117,186 @@
   <template name="gdart_bloc_L5" value="//L5&#10;Widget c1() {&#10;    return BlocBuilder&lt;$ChangePassword$Bloc, $ChangePassword$State&gt;(&#10;      builder: (context, state) {&#10;        return TextFieldV1(&#10;          label: &quot;&quot;,&#10;          controller: null,&#10;          // validator: (value) =&gt; state.isValidPassword ? null : &quot;minimal 1 karakter&quot;,&#10;          // onChanged: (value) =&gt; context.read&lt;ChangePasswordBloc&gt;().add(ChangePasswordEventEdPasswordNew(value)),&#10;        );&#10;      },&#10;    );&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <variable name="ChangePassword" expression="" defaultValue="" alwaysStopAt="true" />
   </template>
+  <template name="gdart_controller_text" value="_ed$Username$Controller.text = state.ed$Username$;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Username" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_tag" value="static const String TAG = &quot;$className$&quot;;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="dartClassName()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdart_const" value="const $INQUIRY$ = &quot;$Inquiry$&quot;;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="INQUIRY" expression="capitalize(String)" defaultValue="" alwaysStopAt="false" />
+    <variable name="Inquiry" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="gdart_view_list" value="// ignore_for_file: constant_identifier_names&#10;&#10;import 'package:badges/badges.dart';&#10;import 'package:flutter/material.dart';&#10;&#10;class $Notification$View extends StatelessWidget {&#10;  static const String TAG = &quot;$Notification$View&quot;;&#10;&#10;  const $Notification$View({Key? key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: const Text(&quot;$Notification$&quot;),&#10;        centerTitle: true,&#10;        shape: appBarShapeRadius(),&#10;      ),&#10;      body: body(context),&#10;    );&#10;  }&#10;&#10;  Widget body(BuildContext context) {&#10;    return content(context);&#10;  }&#10;&#10;  Widget content(BuildContext context) {&#10;    return RefreshIndicator(&#10;      onRefresh: () async {&#10;        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(&#10;          content: Text(&quot;Hay&quot;),&#10;        ));&#10;      },&#10;      child: Column(&#10;        children: [&#10;          FilterWidget(&#10;            showBadge: true,&#10;            onPressed: () {},&#10;          ),&#10;          Expanded(&#10;            child: ListView.builder(&#10;              itemCount: getDummyList().length,&#10;              itemBuilder: (context, index) {&#10;                return $Notification$ItemView(&#10;                  getDummyList()[index].label.toString(),&#10;                ).onTap(() async {&#10;                  Navigator.pushNamed(&#10;                    context,&#10;                      $Notification$DetailsView.TAG,&#10;                    arguments: getDummyList()[index].label.toString(),&#10;                  ).then((value) {});&#10;                });&#10;              },&#10;            ),&#10;          ),&#10;        ],&#10;      ),&#10;    );&#10;  }&#10;}&#10;&#10;// ignore: must_be_immutable&#10;//notification_item_view&#10;class $Notification$ItemView extends StatelessWidget {&#10;  String data;&#10;&#10;  $Notification$ItemView(&#10;    this.data, {&#10;    Key? key,&#10;  }) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Container(&#10;      margin: const EdgeInsets.symmetric(horizontal: 8),&#10;      child: CardV1(&#10;        child: Row(&#10;          mainAxisAlignment: MainAxisAlignment.spaceBetween,&#10;          children: [&#10;            // content(),&#10;            content(),&#10;            arrowRight(),&#10;          ],&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;&#10;  Column content() {&#10;    return Column(&#10;      mainAxisAlignment: MainAxisAlignment.start,&#10;      crossAxisAlignment: CrossAxisAlignment.start,&#10;      children: [&#10;        TextLR(&quot;Inquiry ID&quot;, &quot;IQ123&quot;),&#10;        if (data == &quot;3&quot;) TextLR(&quot;Remarks&quot;, &quot;Tidak valid&quot;),&#10;        TextNormal(&#10;          &quot;2023-05-09 08:00:00&quot;,&#10;          color: Colors.grey,&#10;          fontSize: TextNormal.PS1,&#10;        )&#10;      ].separated(space5()),&#10;    );&#10;  }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Notification" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="gdart_intent" value="Navigator.pushNamed(&#10;  context,&#10;  $ClaimView$.TAG,&#10;  arguments: &quot;&quot;,&#10;).then((value) {&#10;&#10;});" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ClaimView" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_intent_reset" value="pushAndRemoveUntil(context, $HomeView$.TAG, const $HomeView$());" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="HomeView" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_view_detail" value="// ignore_for_file: must_be_immutable, constant_identifier_names&#10;&#10;import 'package:flutter/material.dart';&#10;&#10;class $NotificationDetail$View extends StatelessWidget {&#10;  static const String TAG = &quot;$NotificationDetail$View&quot;;&#10;  String data;&#10;&#10;  $NotificationDetail$View(this.data, {Key? key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: const Text(&quot;$NotificationDetail$&quot;),&#10;        centerTitle: true,&#10;        shape: appBarShapeRadius(),&#10;      ),&#10;      body: _body(context),&#10;    );&#10;  }&#10;&#10;  Widget _body(BuildContext context) {&#10;    return _content(context);&#10;  }&#10;&#10;  Widget _content(BuildContext context) {&#10;    return _section(context);&#10;  }&#10;&#10;  Widget _section(BuildContext context) {&#10;    return RefreshIndicator(&#10;      onRefresh: () async {&#10;        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(&#10;          content: Text(&quot;Hay&quot;),&#10;        ));&#10;      },&#10;      child: ListView(&#10;        children: [&#10;          Column(&#10;            mainAxisAlignment: MainAxisAlignment.start,&#10;            crossAxisAlignment: CrossAxisAlignment.start,&#10;            children: [&#10;              TextLR(&quot;Task ID&quot;, &quot;TA123&quot;),&#10;            ].separatedDetailV3(),&#10;          ).toPadding(vertical: 8, horizontal: 16).toStroke(),&#10;        ],&#10;      ),&#10;    );&#10;  }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NotificationDetail" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="gds" value="final ed$LABEL$Controller = TextEditingController();&#10;&#10;Widget ed$LABEL$(BuildContext context) {&#10;    return BaseTextFormField(&#10;      label: &quot;$label$&quot;,&#10;      required: true,&#10;      controller: ed$LABEL$Controller,&#10;    ).toSelect().onTap(() {&#10;      showDialogSelect(context, getDummyList(), (type, msg, data) {&#10;        if (type == 0) {&#10;          ScaffoldMessenger.of(context).showSnackBar(SnackBar(&#10;            content: Text(msg),&#10;          ));&#10;        } else if (type == 1) {&#10;          var v = data as ItemOptionModel;&#10;          ed$LABEL$Controller.text = v.label.toString();&#10;        }&#10;      });&#10;    });&#10;}" description="gdart_dummy_select" toReformat="false" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="escapeString(label)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdart_controller" value="final ed$title$Controller = TextEditingController();" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdi" value="  final ed$LABEL$Controller = TextEditingController();&#10;&#10;  Widget ed$LABEL$() {&#10;    return BaseTextFormField(&#10;      label: &quot;$label$&quot;,&#10;      required: true,&#10;      controller: ed$LABEL$Controller,&#10;    );&#10;  }" description="gdart_dummy_info" toReformat="false" toShortenFQNames="true">
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="escapeString(label)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdd" value="  final DateRangePickerController _ed$DateOfBirth$Controller = DateRangePickerController();&#10;  String _res$DateOfBirth$ = &quot;&quot;;&#10;&#10;  Widget ed$DateOfBirth$(BuildContext context, int key) {&#10;    return BaseTextFormField(&#10;      label: &quot;Date Of Birth&quot;,&#10;      required: true,&#10;      controller: section4List[key]._ed$DateOfBirth$Controller,&#10;    ).toDate().onTap(() {&#10;      showDialog(&#10;        context: context,&#10;        builder: (context) =&gt; EasyDatePickerV3(&#10;          weekendDays: [],&#10;          disabledDate: [],&#10;          controller: _ed$DateOfBirth$Controller,&#10;          selectionMode: DateRangePickerSelectionMode.single,&#10;          // selectionMode: DateRangePickerSelectionMode.multiple,&#10;        ),&#10;      ).then((value) {&#10;        if (value == false) return;&#10;        _res$DateOfBirth$ = generateDateSingleOrMultiple(_ed$DateOfBirth$Controller.selectedDates!);&#10;        section4List[key]._ed$DateOfBirth$Controller.text = _res$DateOfBirth$;&#10;      });&#10;    });&#10;  }" description="gdart_dummy_date" toReformat="false" toShortenFQNames="true">
+    <variable name="DateOfBirth" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="gdart_dummy_dialog_confirm" value="showConfirmDialog(&#10;  context,&#10;  PERHATIAN,&#10;  $MSG_4$,&#10;  OK,&#10;  () {&#10;  },&#10;  CANCEL,&#10;  null,&#10;  MainAxisAlignment.center,&#10;);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="MSG_4" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_view_form" value="import 'package:cbd/base/gzn_import.dart';&#10;&#10;class $LeadsInquiryCreateTask$View extends StatelessWidget {&#10;  static const String TAG = &quot;$LeadsInquiryCreateTask$View&quot;;&#10;&#10;  $LeadsInquiryCreateTask$View({Key? key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: const Text(&quot;$LeadsInquiryCreateTask$&quot;),&#10;        centerTitle: true,&#10;        shape: appBarShapeRadius(),&#10;      ),&#10;      body: _body(context),&#10;    );&#10;  }&#10;&#10;  Widget _body(BuildContext context) {&#10;    return _content(context);&#10;  }&#10;&#10;  Widget _content(BuildContext context) {&#10;    return _section(context);&#10;  }&#10;&#10;  Widget _section(BuildContext context) {&#10;    return RefreshIndicator(&#10;      onRefresh: () async {&#10;        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(&#10;          content: Text(&quot;Hay&quot;),&#10;        ));&#10;      },&#10;      child: ListView(&#10;        children: [&#10;          Column(&#10;            mainAxisAlignment: MainAxisAlignment.start,&#10;            crossAxisAlignment: CrossAxisAlignment.start,&#10;            children: [&#10;              space16(),&#10;              section1(context),&#10;            ],&#10;          ),&#10;        ],&#10;      ),&#10;    );&#10;  }&#10;&#10;  Widget section1(BuildContext context) {&#10;    return Column(&#10;      children: [&#10;        Text('Hello zein'),&#10;      ],&#10;    );&#10;}&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LeadsInquiryCreateTask" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="gdart_dummy_dialog_info" value="showInfoDialog(&#10;  context,&#10;  ATTENTION,&#10;  MSG_11,&#10;  OK,&#10;  () {&#10;  &#10;  },&#10;  MainAxisAlignment.center,&#10;);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_view_tabs" value="class $Leads$View extends StatelessWidget {&#10;  static const String TAG = &quot;$Leads$View&quot;;&#10;&#10;  const $Leads$View({Key? key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return DefaultTabController(&#10;      length: 1,&#10;      child: Scaffold(&#10;        appBar: AppBar(&#10;          title: const Text($Leads$),&#10;          centerTitle: true,&#10;          bottom: const TabBar(&#10;            isScrollable: true,&#10;            tabs: [&#10;              Tab(icon: Text(&quot;Tabs1&quot;)),&#10;            ],&#10;          ),&#10;        ),&#10;        body: _body(),&#10;      ),&#10;    );&#10;  }&#10;&#10;  Widget _body() {&#10;    return Builder(&#10;        builder: (context) {&#10;          return TabBarView(&#10;            children: [&#10;                Container(),&#10;            ],&#10;          );&#10;        }&#10;    );&#10;  }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Leads" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="gdart_view_menu" value="class $Client$View extends StatelessWidget {&#10;  static const String TAG = &quot;$Client$View&quot;;&#10;&#10;  $Client$View({Key? key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: const Text(&quot;$Client$&quot;),&#10;        centerTitle: true,&#10;        shape: appBarShapeRadius(),&#10;      ),&#10;      body: _body(context),&#10;    );&#10;  }&#10;&#10;  Widget _body(BuildContext context) {&#10;    return _content(context);&#10;  }&#10;&#10;  Widget _content(BuildContext context) {&#10;    return _section(context);&#10;  }&#10;&#10;  Widget _section(BuildContext context) {&#10;    return RefreshIndicator(&#10;      onRefresh: () async {&#10;        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(&#10;          content: Text(&quot;Hay&quot;),&#10;        ));&#10;      },&#10;      child: ListView(&#10;        children: [&#10;          Column(&#10;            mainAxisAlignment: MainAxisAlignment.start,&#10;            crossAxisAlignment: CrossAxisAlignment.start,&#10;            children: [&#10;              BaseButtonOutline(&#10;                bottom: 8,&#10;                top: 8,&#10;                context: context,&#10;                label: 'Create Task',&#10;                onPressed: () {&#10;                },&#10;              ),&#10;            ],&#10;          ),&#10;        ],&#10;      ),&#10;    );&#10;  }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Client" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="gdart_widget_hide_multi" value="&#10;&#10;  bool visibleSection$Tiga$ = false;&#10;&#10;  Widget section$Tiga$(BuildContext context) {&#10;    return Column(&#10;      children: [&#10;        const DividerH().toPaddingH16(),&#10;        Row(&#10;          children: [&#10;            const TextNormal(&#10;              &quot;Hello Zein&quot;,&#10;              fontWeight: FontWeight.bold,&#10;            ),&#10;            Icon(visibleSection$Tiga$ ? Icons.arrow_drop_down_outlined : Icons.arrow_right),&#10;          ],&#10;        ).toPaddingH16V8().onTap(() {&#10;          setState(() {&#10;            visibleSection$Tiga$ = !visibleSection$Tiga$;&#10;          });&#10;        }),&#10;        Visibility(&#10;          visible: visibleSection$Tiga$,&#10;          child: Column(&#10;            mainAxisAlignment: MainAxisAlignment.start,&#10;            crossAxisAlignment: CrossAxisAlignment.start,&#10;            children: [&#10;              ...genSection$Tiga$Content(context),&#10;              BaseButton(&#10;                context: context,&#10;                label: &quot;&quot;,&#10;                icon: const Icon(&#10;                  Icons.add,&#10;                  color: Colors.white,&#10;                ),&#10;                onPressed: () {&#10;                  section$Tiga$List.add(&quot;&quot;);&#10;                  setState(() {});&#10;                },&#10;              ).toButtonIcon().toPaddingH16(),&#10;              space8(),&#10;            ],&#10;          ),&#10;        ),&#10;      ],&#10;    );&#10;  }&#10;&#10;  final List&lt;String&gt; section$Tiga$List = [&quot;&quot;];&#10;&#10;  genSection$Tiga$Content(BuildContext context) {&#10;    List&lt;Widget&gt; res = [];&#10;    for (int i = 0; i &lt; section$Tiga$List.length; i++) {&#10;      res.add(section$Tiga$Content(context, i));&#10;    }&#10;    return res;&#10;  }&#10;&#10;  Column section$Tiga$Content(BuildContext context, int key) {&#10;    return Column(&#10;      crossAxisAlignment: CrossAxisAlignment.start,&#10;      mainAxisAlignment: MainAxisAlignment.start,&#10;      children: [&#10;        space5(),&#10;        TextNormal(&#10;          &quot;Hello Zein ${key + 1}&quot;,&#10;          color: getPrimaryColor(context),&#10;          fontWeight: FontWeight.bold,&#10;        ).toPaddingH16(),&#10;        space10(),&#10;        section$Tiga$ContentFirst(key, context),&#10;      ],&#10;    );&#10;  }&#10;&#10;  Widget section$Tiga$ContentFirst(int key, BuildContext context) {&#10;    return Column(&#10;        children: [&#10;          Row(&#10;            children: [&#10;              Expanded(&#10;                flex: 1,&#10;                child: Text(&quot;Hello Zein&quot;),&#10;              ),&#10;              if (key &gt;= 1)&#10;                BaseButton(&#10;                  top: 0,&#10;                  colorButton: Colors.red,&#10;                  context: context,&#10;                  label: &quot;&quot;,&#10;                  icon: const Icon(&#10;                    Icons.close,&#10;                    color: Colors.white,&#10;                  ),&#10;                  onPressed: () {&#10;                    showConfirmDialog(&#10;                      context,&#10;                      PERHATIAN,&#10;                      MSG_4,&#10;                      YA,&#10;                      () {&#10;                        section$Tiga$List.removeAt(key);&#10;                        Navigator.pop(context);&#10;                        setState(() {});&#10;                      },&#10;                      BATAL,&#10;                      null,&#10;                      MainAxisAlignment.center,&#10;                    );&#10;                  },&#10;                ).toButtonIcon(),&#10;            ],&#10;          ),&#10;        ],&#10;      );&#10;  }" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Tiga" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdart_widget_hide_single" value="bool visibleSection$Number$ = false;&#10;&#10;Widget section$Number$(BuildContext context) {&#10;  return Column(&#10;    children: [&#10;      const DividerH().toPaddingH16(),&#10;      Row(&#10;        children: [&#10;          TextNormal(&#10;            &quot;Hallo Zein&quot;,&#10;            fontWeight: FontWeight.bold,&#10;          ),&#10;          Icon(visibleSection$Number$ ? Icons.arrow_drop_down_outlined : Icons.arrow_right),&#10;        ],&#10;      ).toPaddingH16V8().onTap(() {&#10;        setState(() {&#10;          visibleSection$Number$ = !visibleSection$Number$;&#10;        });&#10;      }),&#10;      Visibility(&#10;        visible: visibleSection$Number$,&#10;        child: section$Number$Content(context),&#10;      ),&#10;    ],&#10;  ).toMarginTopSection();&#10;}&#10;&#10;Column section$Number$Content(BuildContext context) {&#10;  return Column(&#10;    children: [&#10;      TextNormal(&quot;Hallo Zein Lagi&quot;),&#10;      space8(),&#10;    ].addToPaddingH16V4().separatedDetail(),&#10;  );&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Number" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdart_model" value="class $PersonInChargeInformation$ {&#10;&#10;  $PersonInChargeInformation$({&#10;    Key? key,&#10;  });&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="PersonInChargeInformation" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="gdart_widget_item" value="// ignore: must_be_immutable&#10;//notification_item_view&#10;import 'package:cbd/base/gzn_import.dart';&#10;&#10;class $ProgressTaskList$ItemView extends StatelessWidget {&#10;  String data;&#10;&#10;  $ProgressTaskList$ItemView(&#10;      this.data, {&#10;        Key? key,&#10;      }) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Container(&#10;      margin: EdgeInsets.symmetric(horizontal: 8),&#10;      child: CardV1(&#10;        child: Row(&#10;          mainAxisAlignment: MainAxisAlignment.spaceBetween,&#10;          children: [&#10;            // content(),&#10;            content(),&#10;            arrowRight(),&#10;          ],&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;&#10;&#10;  Column content() {&#10;    return Column(&#10;      mainAxisAlignment: MainAxisAlignment.start,&#10;      crossAxisAlignment: CrossAxisAlignment.start,&#10;      children: [&#10;        TextLR(&quot;Inquiry ID&quot;, &quot;IQ123&quot;),&#10;        TextLR(&quot;Company Name&quot;, &quot;PT. Bintang&quot;),&#10;        TextLR(&quot;Requestor&quot;, &quot;Sinta&quot;),&#10;        TextLR(&quot;Inquiry Source&quot;, &quot;Whatsapp&quot;),&#10;        TextNormal(&#10;          &quot;2023-05-09 08:00:00&quot;,&#10;          color: Colors.grey,&#10;          fontSize: TextNormal.PS1,&#10;        )&#10;      ].separated(space5()),&#10;    );&#10;  }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ProgressTaskList" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gddivider" value="const DividerH().toPaddingH16V8()," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdart_dummy_details" value="  Column section1() {&#10;    return Column(&#10;      children: [&#10;        TextLR(&quot;Lead ID&quot;, &quot;L123&quot;).inTheTop(),&#10;        TextLR(&quot;Created Date&quot;, &quot;2023-05-10  08:00:00&quot;),&#10;        TextLR(&quot;Lead Status&quot;, &quot;New&quot;),&#10;      ].addToPaddingH16V4().separatedDetail(),&#10;    );&#10;  }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdart_widget_divider" value="const DividerH().toPaddingH16V4()" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdst" value="Widget section$One$() {&#10;    return Column(&#10;      children: [&#10;        TextLR(&quot;Text 1&quot;, &quot;-&quot;).inTheTop(),&#10;        TextLR(&quot;Text 2&quot;, &quot;-&quot;),&#10;        TextLR(&quot;Text 3&quot;, &quot;-&quot;).inTheBottom(),&#10;      ].addToPaddingH16V4().separatedDetail(),&#10;    );&#10;}" description="gdart_widget_section_text" toReformat="false" toShortenFQNames="true">
+    <variable name="One" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdart_widget_section_button" value="Widget section$One$(BuildContext context) {&#10;  return Row(&#10;    children: [&#10;      Expanded(&#10;        flex: 1,&#10;        child: BaseButton(&#10;          right: 8,&#10;          top: 0,&#10;          context: context,&#10;          label: &quot;Save&quot;,&#10;          onPressed: () {&#10;            btnDiscontinueAction(context);&#10;          },&#10;        ),&#10;      ),&#10;    ],&#10;  );&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="One" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gddate" value="final DateRangePickerController _ed$DateOfContact$Controller = DateRangePickerController();&#10;final ed$DateOfContact$Controller = TextEditingController();&#10;String _res$DateOfContact$ = &quot;&quot;;&#10;&#10;Widget ed$DateOfContact$(BuildContext context) {&#10;  return BaseTextFormField(&#10;    label: &quot;$DateOfContact$&quot;,&#10;    required: true,&#10;    controller: ed$DateOfContact$Controller,&#10;  ).toDate().onTap(() {&#10;    showDialog(&#10;      context: context,&#10;      builder: (context) =&gt; EasyDatePickerV3(&#10;        weekendDays: [],&#10;        disabledDate: [],&#10;        controller: _ed$DateOfContact$Controller,&#10;        selectionMode: DateRangePickerSelectionMode.single,&#10;        // selectionMode: DateRangePickerSelectionMode.multiple,&#10;      ),&#10;    ).then((value) {&#10;      if (value == false) return;&#10;      _res$DateOfContact$ = generateDateSingleOrMultiple(_ed$DateOfContact$Controller.selectedDates!);&#10;      ed$DateOfContact$Controller.text = _res$DateOfContact$;&#10;    });&#10;  });&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="DateOfContact" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="gdc" value="        Row(&#10;          children: [&#10;            Checkbox(value: true, onChanged: (v) {}),&#10;            TextNormal(&quot;Select All&quot;),&#10;          ],&#10;        )," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
